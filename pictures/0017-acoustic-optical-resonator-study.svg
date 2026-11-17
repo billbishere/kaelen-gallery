@@ -1,0 +1,197 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080C14" />
+      <stop offset="50%" stop-color="#0B132B" />
+      <stop offset="100%" stop-color="#05080E" />
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0E3B43" />
+      <stop offset="50%" stop-color="#1D6A75" />
+      <stop offset="100%" stop-color="#0E3B43" />
+    </linearGradient>
+    <linearGradient id="tealLight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#289BABB" />
+      <stop offset="100%" stop-color="#0E3B43" />
+    </linearGradient>
+    <linearGradient id="brassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37" />
+      <stop offset="50%" stop-color="#AA7C11" />
+      <stop offset="100%" stop-color="#664A0A" />
+    </linearGradient>
+    <linearGradient id="prismGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(100, 220, 255, 0.4)" />
+      <stop offset="50%" stop-color="rgba(150, 100, 255, 0.3)" />
+      <stop offset="100%" stop-color="rgba(0, 240, 200, 0.5)" />
+    </linearGradient>
+    <linearGradient id="laserBeam" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF3300" stop-opacity="0.1" />
+      <stop offset="50%" stop-color="#FF6600" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#FF3300" stop-opacity="0.1" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="deepGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGrad)" />
+
+  <!-- Symmetrical Grid Lines (Precision Alignment) -->
+  <g stroke="#152840" stroke-width="1" opacity="0.5">
+    <line x1="400" y1="0" x2="400" y2="600" />
+    <line x1="0" y1="300" x2="800" y2="300" />
+    <circle cx="400" cy="300" r="250" fill="none" stroke-dasharray="2,4" />
+    <circle cx="400" cy="300" r="180" fill="none" stroke-dasharray="1,3" />
+    <circle cx="400" cy="300" r="100" fill="none" stroke-dasharray="4,2" />
+    <line x1="150" y1="300" x2="650" y2="300" stroke-dasharray="5,5" />
+  </g>
+
+  <!-- Optical Resonator Rays / Interference Patterns -->
+  <g filter="id="deepGlow" opacity="0.6">
+    <polygon points="400,120 450,300 400,480 350,300" fill="url(#prismGrad)" />
+    <line x1="100" y1="300" x2="700" y2="300" stroke="url(#laserBeam)" stroke-width="2" filter="url(#glow)" />
+    <line x1="400" y1="50" x2="400" y2="550" stroke="#00F0FF" stroke-width="1" opacity="0.3" />
+  </g>
+
+  <!-- Tectonic Waveform Grids (Bottom & Top) -->
+  <g opacity="0.7" stroke="#FF5500" stroke-width="1.5" fill="none">
+    <path d="M 100,530 L 250,530 L 270,510 L 290,550 L 310,530 L 490,530 L 510,490 L 530,570 L 550,530 L 700,530" />
+    <path d="M 100,70 L 250,70 L 270,50 L 290,90 L 310,70 L 490,70 L 510,50 L 530,90 L 550,70 L 700,70" stroke="#1D6A75" />
+  </g>
+
+  <!-- Bell Tower Structure (Rigorous Teal Masonry) -->
+  <g>
+    <!-- Foundation Platform -->
+    <polygon points="280,500 520,500 560,520 240,520" fill="#0A252B" stroke="#289BAB" stroke-width="2" />
+    <polygon points="300,480 500,480 520,500 280,500" fill="url(#tealGrad)" stroke="#289BAB" stroke-width="1.5" />
+    
+    <!-- Main Tower Pillars -->
+    <!-- Left Pillar -->
+    <polygon points="310,180 340,180 350,480 320,480" fill="url(#tealLight)" stroke="#40E0D0" stroke-width="1" />
+    <line x1="315" y1="180" x2="315" y2="480" stroke="#081B20" stroke-width="2" />
+    <line x1="335" y1="180" x2="335" y2="480" stroke="#081B20" stroke-width="1" />
+
+    <!-- Right Pillar -->
+    <polygon points="490,180 460,180 450,480 480,480" fill="url(#tealLight)" stroke="#40E0D0" stroke-width="1" />
+    <line x1="485" y1="180" x2="485" y2="480" stroke="#081B20" stroke-width="2" />
+    <line x1="465" y1="180" x2="465" y2="480" stroke="#081B20" stroke-width="1" />
+
+    <!-- Masonry Horizontal Ties -->
+    <g stroke="#289BAB" stroke-width="2" fill="url(#tealGrad)">
+      <rect x="315" y="220" width="170" height="15" />
+      <rect x="310" y="300" width="180" height="20" />
+      <rect x="315" y="380" width="170" height="15" />
+    </g>
+
+    <!-- Tower Apex (Roof) -->
+    <polygon points="400,100 480,170 320,170" fill="url(#tealGrad)" stroke="#40E0D0" stroke-width="2" />
+    <polygon points="400,115 465,168 335,168" fill="#081B20" />
+    <!-- Spire -->
+    <line x1="400" y1="100" x2="400" y2="60" stroke="#40E0D0" stroke-width="3" />
+    <circle cx="400" cy="55" r="4" fill="#FF3300" filter="url(#glow)" />
+  </g>
+
+  <!-- Miniature Refractive Prisms (Central Assembly) -->
+  <g>
+    <!-- Central Optical Bench -->
+    <rect x="370" y="270" width="60" height="60" fill="#050B10" stroke="#1D6A75" stroke-width="2" />
+    
+    <!-- Prisms -->
+    <polygon points="400,280 425,320 375,320" fill="url(#prismGrad)" stroke="#99EEFF" stroke-width="1.5" filter="url(#glow)" />
+    <polygon points="400,325 420,295 380,295" fill="url(#prismGrad)" stroke="#FF99EE" stroke-width="1.5" />
+    
+    <!-- Core Resonance Sphere (Teal/Purple Energy) -->
+    <circle cx="400" cy="300" r="12" fill="#9933FF" filter="url(#glow)" />
+    <circle cx="400" cy="300" r="6" fill="#FFFFFF" />
+  </g>
+
+  <!-- Brass Dampening Hammers & Bell -->
+  <g>
+    <!-- The Acoustic Bell (Inverted Teal/Brass Chalice) -->
+    <path d="M 360,200 C 360,180 440,180 440,200 C 440,210 450,225 455,235 L 345,235 C 350,225 360,210 360,200 Z" fill="url(#tealGrad)" stroke="url(#brassGrad)" stroke-width="3" />
+    <ellipse cx="400" cy="235" rx="55" ry="6" fill="url(#brassGrad)" />
+    
+    <!-- Striker Clapper -->
+    <circle cx="400" cy="225" r="8" fill="url(#brassGrad)" />
+
+    <!-- Left Dampening Hammer (Tactical Orange/Brass) -->
+    <g>
+      <line x1="300" y1="210" x2="360" y2="220" stroke="url(#brassGrad)" stroke-width="6" stroke-linecap="round" />
+      <rect x="290" y="203" width="20" height="14" rx="3" fill="#FF5500" stroke="#D4AF37" stroke-width="2" />
+      <circle cx="300" cy="210" r="3" fill="#FFFFFF" />
+    </g>
+
+    <!-- Right Dampening Hammer -->
+    <g>
+      <line x1="500" y1="210" x2="440" y2="220" stroke="url(#brassGrad)" stroke-width="6" stroke-linecap="round" />
+      <rect x="490" y="203" width="20" height="14" rx="3" fill="#FF5500" stroke="#D4AF37" stroke-width="2" />
+      <circle cx="500" cy="210" r="3" fill="#FFFFFF" />
+    </g>
+  </g>
+
+  <!-- High-Precision Instrumentation & Calibration Dials -->
+  <g>
+    <!-- Left Panel Dial -->
+    <circle cx="332" cy="340" r="16" fill="#05080E" stroke="url(#brassGrad)" stroke-width="2" />
+    <circle cx="332" cy="340" r="12" fill="#0E3B43" />
+    <line x1="332" y1="340" x2="342" y2="332" stroke="#FF3300" stroke-width="2" />
+    <circle cx="332" cy="340" r="2" fill="#FFFFFF" />
+
+    <!-- Right Panel Dial -->
+    <circle cx="468" cy="340" r="16" fill="#05080E" stroke="url(#brassGrad)" stroke-width="2" />
+    <circle cx="468" cy="340" r="12" fill="#0E3B43" />
+    <line x1="468" y1="340" x2="458" y2="332" stroke="#FF3300" stroke-width="2" />
+    <circle cx="468" cy="340" r="2" fill="#FFFFFF" />
+
+    <!-- Indicator Lights (Red/Orange Tactical Accents) -->
+    <circle cx="332" cy="410" r="4" fill="#FF3300" filter="url(#glow)" />
+    <circle cx="348" cy="410" r="4" fill="#FF9900" />
+    <circle cx="452" cy="410" r="4" fill="#FF9900" />
+    <circle cx="468" cy="410" r="4" fill="#FF3300" filter="url(#glow)" />
+  </g>
+
+  <!-- Precision Laser/Optical Guides (Horizontal & Vertical Symmetry) -->
+  <g stroke="#00FFFF" stroke-width="1" opacity="0.6">
+    <!-- Horizontal Alignment Guides passing through prisms -->
+    <line x1="180" y1="300" x2="370" y2="300" stroke-dasharray="4,2" />
+    <line x1="430" y1="300" x2="620" y2="300" stroke-dasharray="4,2" />
+    
+    <!-- Diagonal Harmonic Vectors -->
+    <line x1="400" y1="300" x2="280" y2="180" opacity="0.4" stroke="#9933FF" />
+    <line x1="400" y1="300" x2="520" y2="180" opacity="0.4" stroke="#9933FF" />
+    <line x1="400" y1="300" x2="280" y2="420" opacity="0.4" stroke="#9933FF" />
+    <line x1="400" y1="300" x2="520" y2="420" opacity="0.4" stroke="#9933FF" />
+  </g>
+
+  <!-- Calibration Markings & Readout Text (Solemn/Methodical) -->
+  <g fill="#40E0D0" font-family="monospace" font-size="10" opacity="0.8" letter-spacing="1">
+    <text x="325" y="460">SYS.ON.01</text>
+    <text x="425" y="460">FREQ: 432Hz</text>
+    <text x="335" y="160">TECTONIC SYNC</text>
+    
+    <!-- Target Reticle at Center -->
+    <circle cx="400" cy="300" r="35" fill="none" stroke="#FF3300" stroke-width="0.75" opacity="0.5" stroke-dasharray="6,3" />
+    <line x1="390" y1="300" x2="395" y2="300" stroke="#FF3300" stroke-width="1" />
+    <line x1="405" y1="300" x2="410" y2="300" stroke="#FF3300" stroke-width="1" />
+    <line x1="400" y1="290" x2="400" y2="295" stroke="#FF3300" stroke-width="1" />
+    <line x1="400" y1="305" x2="400" y2="310" stroke="#FF3300" stroke-width="1" />
+  </g>
+
+  <!-- Frame / Border to enforce absolute containment and tidiness -->
+  <rect x="15" y="15" width="770" height="570" fill="none" stroke="#1D6A75" stroke-width="2" />
+  <rect x="25" y="25" width="750" height="550" fill="none" stroke="#0E3B43" stroke-width="1" />
+  
+  <!-- Corner alignment ticks -->
+  <g stroke="#40E0D0" stroke-width="2">
+    <path d="M 15 35 L 15 15 L 35 15" fill="none" />
+    <path d="M 785 35 L 785 15 L 765 15" fill="none" />
+    <path d="M 15 565 L 15 585 L 35 585" fill="none" />
+    <path d="M 785 565 L 785 585 L 765 585" fill="none" />
+  </g>
+</svg>
