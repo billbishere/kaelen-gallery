@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#080a0f" />
+      <stop offset="50%" stop-color="#111622" />
+      <stop offset="100%" stop-color="#1a202c" />
+    </linearGradient>
+    <linearGradient id="pillar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1c222d" />
+      <stop offset="20%" stop-color="#323c4d" />
+      <stop offset="50%" stop-color="#5a687c" />
+      <stop offset="80%" stop-color="#27303f" />
+      <stop offset="100%" stop-color="#121721" />
+    </linearGradient>
+    <linearGradient id="cadmium-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff2a6d" />
+      <stop offset="100%" stop-color="#05d9e8" />
+    </linearGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d1117" />
+      <stop offset="100%" stop-color="#040608" />
+    </linearGradient>
+    <radialGradient id="moonlight" cx="0.7" cy="0.2" r="0.8">
+      <stop offset="0%" stop-color="#3a506b" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#080a0f" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bg)" />
+  <rect width="800" height="600" fill="url(#moonlight)" />
+
+  <!-- Distant mechanical skeletal structure / island edge -->
+  <path d="M0 480 L150 470 L300 485 L500 475 L800 490 L800 600 L0 600 Z" fill="url(#ground)" />
+  <path d="M120 473 L120 430 L135 420 L135 473 Z" fill="#1c222d" opacity="0.7" />
+  <path d="M650 482 L650 390 L660 380 L670 390 L670 484 Z" fill="#1c222d" opacity="0.5" />
+
+  <!-- Basalt Foundation -->
+  <path d="M280 500 L320 460 L480 460 L520 500 L500 540 L300 540 Z" fill="#151922" stroke="#283244" stroke-width="2" />
+  <path d="M320 460 L360 490 L440 490 L480 460" fill="none" stroke="#05d9e8" stroke-width="1" opacity="0.4" />
+
+  <!-- Central Cadmium-Trimmed Pillar -->
+  <rect x="370" y="80" width="60" height="400" fill="url(#pillar)" />
+  
+  <!-- Precise Mechanical Segments on Pillar -->
+  <g fill="none" stroke="#080a0f" stroke-width="3">
+    <line x1="370" y1="120" x2="430" y2="120" />
+    <line x1="370" y1="180" x2="430" y2="180" />
+    <line x1="370" y1="240" x2="430" y2="240" />
+    <line x1="370" y1="300" x2="430" y2="300" />
+    <line x1="370" y1="360" x2="430" y2="360" />
+    <line x1="370" y1="420" x2="430" y2="420" />
+  </g>
+
+  <!-- High-Contrast Accent Glow (Teal &amp; Pink) -->
+  <line x1="370" y1="80" x2="370" y2="480" stroke="#ff2a6d" stroke-width="3" />
+  <line x1="430" y1="80" x2="430" y2="480" stroke="#05d9e8" stroke-width="3" />
+  
+  <!-- Instrument/Dial on Pillar (Nostalgic Stationary Calibration) -->
+  <circle cx="400" cy="200" r="15" fill="#0c1017" stroke="#05d9e8" stroke-width="2" />
+  <line x1="400" y1="200" x2="410" y2="190" stroke="#ff2a6d" stroke-width="2" />
+  <circle cx="400" cy="200" r="3" fill="#ff2a6d" />
+
+  <rect x="385" y="280" width="30" height="60" fill="#0c1017" stroke="#323c4d" stroke-width="2" />
+  <line x1="390" y1="295" x2="410" y2="295" stroke="#ff2a6d" stroke-width="2" />
+  <line x1="390" y1="310" x2="410" y2="310" stroke="#ff2a6d" stroke-width="2" />
+  <line x1="390" y1="325" x2="410" y2="325" stroke="#ff2a6d" stroke-width="2" />
+
+  <!-- Wet Grass / Blades in Foreground (Structured, stylized) -->
+  <g stroke="#1c2826" stroke-width="2" fill="none">
+    <path d="M280 500 L270 470" />
+    <path d="M295 505 L290 465" />
+    <path d="M310 510 L315 475" />
+    <path d="M330 515 L325 480" />
+    <path d="M470 515 L475 480" />
+    <path d="M490 510 L485 475" />
+    <path d="M505 505 L510 465" />
+    <path d="M520 500 L530 470" />
+  </g>
+
+  <!-- Heavy Rainfall (Diagonal slashes) -->
+  <g stroke="#7090b0" stroke-width="1" opacity="0.6">
+    <line x1="100" y1="0" x2="40" y2="150" />
+    <line x1="220" y1="0" x2="160" y2="150" />
+    <line x1="340" y1="0" x2="280" y2="150" />
+    <line x1="460" y1="0" x2="400" y2="150" />
+    <line x1="580" y1="0" x2="520" y2="150" />
+    <line x1="700" y1="0" x2="640" y2="150" />
+
+    <line x1="40" y1="150" x2="-20" y2="300" />
+    <line x1="160" y1="150" x2="100" y2="300" />
+    <line x1="280" y1="150" x2="220" y2="300" />
+    <line x1="400" y1="150" x2="340" y2="300" />
+    <line x1="520" y1="150" x2="460" y2="300" />
+    <line x1="640" y1="150" x2="580" y2="300" />
+    <line x1="760" y1="150" x2="700" y2="300" />
+
+    <line x1="-20" y1="300" x2="-80" y2="450" />
+    <line x1="100" y1="300" x2="40" y2="450" />
+    <line x1="220" y1="300" x2="160" y2="450" />
+    <line x1="340" y1="300" x2="280" y2="450" />
+    <line x1="460" y1="300" x2="400" y2="450" />
+    <line x1="580" y1="300" x2="520" y2="450" />
+    <line x1="700" y1="300" x2="640" y2="450" />
+    <line x1="820" y1="300" x2="760" y2="450" />
+
+    <line x1="40" y1="450" x2="-20" y2="600" />
+    <line x1="160" y1="450" x2="100" y2="600" />
+    <line x1="280" y1="450" x2="220" y2="600" />
+    <line x1="400" y1="450" x2="340" y2="600" />
+    <line x1="520" y1="450" x2="460" y2="600" />
+    <line x1="640" y1="450" x2="580" y2="600" />
+    <line x1="760" y1="450" x2="700" y2="600" />
+  </g>
+
+  <!-- Heavier Foreground Rain Streaks -->
+  <g stroke="#05d9e8" stroke-width="1.5" opacity="0.4">
+    <line x1="550" y1="50" x2="470" y2="250" />
+    <line x1="250" y1="200" x2="170" y2="400" />
+    <line x1="680" y1="300" x2="600" y2="500" />
+  </g>
+
+  <!-- Splashes on the basalt and ground -->
+  <ellipse cx="380" cy="495" rx="8" ry="2" fill="none" stroke="#05d9e8" stroke-width="1" opacity="0.7" />
+  <ellipse cx="425" cy="505" rx="12" ry="3" fill="none" stroke="#ff2a6d" stroke-width="1" opacity="0.5" />
+  <ellipse cx="350" cy="520" rx="6" ry="1.5" fill="none" stroke="#05d9e8" stroke-width="1" opacity="0.6" />
+
+  <!-- Top cap of the pillar with a sharp teal beacon -->
+  <polygon points="365,80 435,80 440,70 360,70" fill="#222a38" stroke="#5a687c" stroke-width="1" />
+  <circle cx="400" cy="70" r="4" fill="#05d9e8" />
+  <circle cx="400" cy="70" r="8" fill="#05d9e8" opacity="0.3" />
+</svg>
