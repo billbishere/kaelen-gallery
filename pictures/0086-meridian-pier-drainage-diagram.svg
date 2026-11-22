@@ -1,0 +1,38 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="tealgrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#006666"/><stop offset="100%" stop-color="#008888"/></linearGradient><linearGradient id="graygrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2b2b2b"/><stop offset="100%" stop-color="#444444"/></linearGradient><marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#000"/></marker></defs><style>.text{font-family:Arial,Helvetica,sans-serif;}</style><text x="400" y="40" text-anchor="middle" font-size="24" fill="#008888" class="text">Meridian Pier Drainage Diagram</text><!-- Posts -->
+<rect x="115" y="370" width="10" height="80" fill="url(#graygrad)"/>
+<rect x="255" y="370" width="10" height="80" fill="url(#graygrad)"/>
+<rect x="395" y="370" width="10" height="80" fill="url(#graygrad)"/>
+<rect x="535" y="370" width="10" height="80" fill="url(#graygrad)"/>
+<rect x="675" y="370" width="10" height="80" fill="url(#graygrad)"/>
+<!-- Vertical conduits to horizontal pipe -->
+<path d="M120,370 V300" stroke="#000" stroke-width="4" stroke-linecap="round"/>
+<path d="M260,370 V300" stroke="#000" stroke-width="4" stroke-linecap="round"/>
+<path d="M400,370 V300" stroke="#000" stroke-width="4" stroke-linecap="round"/>
+<path d="M540,370 V300" stroke="#000" stroke-width="4" stroke-linecap="round"/>
+<path d="M680,370 V300" stroke="#000" stroke-width="4" stroke-linecap="round"/>
+<!-- Horizontal pipe -->
+<path d="M120,300 H680" stroke="#000" stroke-width="4" marker-end="url(#arrow)"/>
+<!-- Joints -->
+<circle cx="120" cy="300" r="3" fill="#000"/>
+<circle cx="260" cy="300" r="3" fill="#000"/>
+<circle cx="400" cy="300" r="3" fill="#000"/>
+<circle cx="540" cy="300" r="3" fill="#000"/>
+<circle cx="680" cy="300" r="3" fill="#000"/>
+<!-- Overflow reservoirs and downward connections -->
+<path d="M120,300 V240" stroke="#000" stroke-width="2"/>
+<path d="M260,300 V240" stroke="#000" stroke-width="2"/>
+<path d="M400,300 V240" stroke="#000" stroke-width="2"/>
+<path d="M540,300 V240" stroke="#000" stroke-width="2"/>
+<path d="M680,300 V240" stroke="#000" stroke-width="2"/>
+<rect x="100" y="200" width="40" height="20" fill="url(#tealgrad)" stroke="#000" stroke-width="1"/>
+<rect x="240" y="200" width="40" height="20" fill="url(#tealgrad)" stroke="#000" stroke-width="1"/>
+<rect x="380" y="200" width="40" height="20" fill="url(#tealgrad)" stroke="#000" stroke-width="1"/>
+<rect x="520" y="200" width="40" height="20" fill="url(#tealgrad)" stroke="#000" stroke-width="1"/>
+<rect x="660" y="200" width="40" height="20" fill="url(#tealgrad)" stroke="#000" stroke-width="1"/>
+<!-- Labels for posts -->
+<text x="120" y="470" text-anchor="middle" font-size="10" fill="#fff">Post 1</text>
+<text x="260" y="470" text-anchor="middle" font-size="10" fill="#fff">Post 2</text>
+<text x="400" y="470" text-anchor="middle" font-size="10" fill="#fff">Post 3</text>
+<text x="540" y="470" text-anchor="middle" font-size="10" fill="#fff">Post 4</text>
+<text x="680" y="470" text-anchor="middle" font-size="10" fill="#fff">Post 5</text>
+</svg>
