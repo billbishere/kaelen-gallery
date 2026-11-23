@@ -1,0 +1,84 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Warm white sand gradient for the ground -->
+    <linearGradient id="sandGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FDFCF5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E8E4D3;stop-opacity:1" />
+    </linearGradient>
+    <!-- Soft pink for flowers -->
+    <linearGradient id="flowerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFB7C5;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#F39BA4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E68A9B;stop-opacity:1" />
+    </linearGradient>
+    <!-- Muted gray for the tholos stones (cold, unwelcoming texture) -->
+    <radialGradient id="stoneGrad" cx="30%" cy="30%" r="50%">
+      <stop offset="0%" style="stop-color:#9A9E9C;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#828684;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5E6260;stop-opacity:1" />
+    </radialGradient>
+    <!-- Inner warmth of the dome -->
+    <linearGradient id="domeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E6DCD8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#CFCAC7;stop-opacity:1" />
+    </linearGradient>
+    <!-- Water sink visual -->
+    <radialGradient id="waterGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#AECAD3;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#6B8C92;stop-opacity:0.6" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background: The White Sand Sea -->
+  <rect width="800" height="600" fill="url(#sandGrad)"/>
+
+  <!-- Distant water reflecting the gray stone's melancholy -->
+  <path d="M -100,500 Q 400,520 900,500" fill="none" stroke="url(#waterGrad)" stroke-width="40" opacity="0.6"/>
+
+  <!-- The Harmonic Tholos Base (Ring Foundation) -->
+  <ellipse cx="400" cy="450" rx="180" ry="120" fill="#D3CBC8" opacity="0.9"/>
+  
+  <!-- Vertical Stone Columns - Gray and Cold -->
+  <!-- Left Column -->
+  <path d="M 260,425 L 320,425 L 320,350 L 280,350 Z" fill="url(#stoneGrad)" stroke="#3D403E" stroke-width="1"/>
+  <!-- Right Column -->
+  <path d="M 675,425 L 735,425 L 735,350 L 695,350 Z" fill="url(#stoneGrad)" stroke="#3D403E" stroke-width="1"/>
+  <!-- Center support pillar for dome structure -->
+  <rect x="400" y="380" width="10" height="70" fill="url(#stoneGrad)" opacity="0.8"/>
+
+  <!-- Dome Structure (Curved Arching) -->
+  <path d="M 260,350 Q 400,260 540,350 L 540,340 Q 400,310 260,340 Z" fill="url(#stoneGrad)" stroke="#3D403E" stroke-width="1"/>
+  
+  <!-- Roof Cap / Ocula -->
+  <ellipse cx="400" cy="250" rx="70" ry="45" fill="#E0DED9" opacity="0.9" stroke="#AEB0AC" stroke-width="1"/>
+  <path d="M 380,250 Q 400,280 420,250" stroke="#7B7E7C" fill="none" stroke-width="2" opacity="0.6"/>
+
+  <!-- Interior Warmth hint through semi-transparent roof -->
+  <ellipse cx="400" cy="240" rx="90" ry="55" fill="url(#domeGrad)" opacity="0.15"/>
+
+  <!-- Clusters of Pink Flowers around the base (Joyful contrast) -->
+  <!-- Using circles for soft texture -->
+  <g filter="blur(2px)">
+    <!-- Left Cluster -->
+    <circle cx="340" cy="460" r="8" fill="url(#flowerGrad)" opacity="0.9"/>
+    <circle cx="355" cy="458" r="6" fill="#F2CDD1" opacity="0.7"/>
+    <circle cx="365" cy="468" r="7" fill="url(#flowerGrad)" opacity="0.9"/>
+    
+    <!-- Bottom Center Cluster -->
+    <circle cx="410" cy="470" r="6" fill="url(#flowerGrad)" opacity="0.85"/>
+    <circle cx="425" cy="465" r="5" fill="#F2CDD1" opacity="0.7"/>
+    
+    <!-- Right Cluster -->
+    <circle cx="495" cy="462" r="8" fill="url(#flowerGrad)" opacity="0.9"/>
+    <circle cx="480" cy="458" r="7" fill="#F2CDD1" opacity="0.7"/>
+    <circle cx="510" cy="475" r="6" fill="url(#flowerGrad)" opacity="0.9"/>
+  </g>
+
+  <!-- Architectural Details (Molding/Carvings) -->
+  <!-- Base molding -->
+  <path d="M 250,448 L 318,448 A 5,5 0 0,1 322,450 L 400,462 L 498,450 A 5,5 0 0,1 502,448 L 550,448" fill="none" stroke="#C2C4C1" stroke-width="3"/>
+
+  <!-- Title and Subtitle -->
+  <text x="400" y="100" text-anchor="middle" font-family="Georgia, serif" font-size="24" fill="#5E6260" opacity="0.7" letter-spacing="2">Harmonic Tholos</text>
+  <text x="400" y="570" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#8B8F8D" alignment-baseline="hanging">Island Drawing by Kaelen</text>
+</svg>
