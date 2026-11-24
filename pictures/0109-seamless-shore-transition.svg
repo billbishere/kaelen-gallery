@@ -1,0 +1,102 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="background-color: #f4f1ea;">
+  <defs>
+    <!-- Sky Gradient -->
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#eef9ff;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#b8dce8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5faee3;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Teal Water Gradient (Soft, Porous Edges) -->
+    <radialGradient id="waterGrad" cx="30%" cy="70%" r="60%" fx="30%" fy="80%">
+      <stop offset="0%" style="stop-color:#7ec4e6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#2d7e8c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a5561;stop-opacity:0.9" />
+    </radialGradient>
+    
+    <!-- Porous Edge Effect (Spiral Blur) -->
+    <filter id="seamlessEdge">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="20"/>
+    </filter>
+    
+    <!-- Sand Texture Gradient -->
+    <linearGradient id="sandGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f9f4e8;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#eaddab;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d6c294;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Arches (Airy Structure) -->
+    <filter id="archBlur">
+       <feGaussianBlur in="SourceGraphic" stdDeviation="4"/>
+    </filter>
+  </defs>
+
+  <!-- Background: Open Air / Sky -->
+  <rect x="0" y="0" width="800" height="600" fill="url(#skyGrad)"/>
+
+  <!-- Distant Horizon / Sea Frame -->
+  <!-- The sea extends endlessly, framing the edge without sealing it off -->
+  <ellipse cx="400" cy="350" rx="480" ry="60" fill="#aebdd9" opacity="0.1"/>
+  <ellipse cx="400" cy="350" rx="470" ry="58" fill="url(#waterGrad)" filter="blur(12)" opacity="0.8"/>
+  
+  <!-- Seamless Shore Transition: Teal blending into Yellow Sand -->
+  <path d="M -20 340 
+           Q 400 250 820 360 
+           Q 600 380 500 400 
+           L 520 450 
+           Q 450 320 400 360 
+           Q 350 390 300 370 
+           L -20 350 Z" 
+        fill="url(#waterGrad)" filter="blur(15)"/>
+    
+    <path d="M -15 342 
+           Q 400 260 820 358 
+           C 620 375 510 400 520 455 
+           Q 460 340 390 375 
+           Q 360 405 295 385 
+           L -10 348 Z" 
+        fill="#f9f4e8" filter="blur(25)" opacity="0.9"/>
+        
+    <!-- Refined Sand Bed (Soft Sand Textures underfoot feel) -->
+    <path d="M -20 345 
+           Q 400 270 820 365 
+           C 615 390 505 420 525 465 
+           Q 465 365 400 385 
+           Q 360 425 300 405 
+           L -15 350 Z" 
+        fill="url(#sandGrad)" filter="blur(20)"/>
+    
+    <!-- Foreground Sand Detail: Ripples suggesting softness and flow -->
+    <path d="M 480 470 Q 400 500 300 460 L 280 500 Q 390 520 490 490" 
+          stroke="#dcbfa6" stroke-width="4" fill="none" opacity="0.5"/>
+    <path d="M 400 485 Q 320 515 240 480 L 220 515 Q 305 530 395 505" 
+          stroke="#dcbfa6" stroke-width="3" fill="none" opacity="0.4"/>
+    
+    <!-- Arch Structure: Airy Pillars framing the view, not blocking it -->
+    <!-- Left Arch -->
+    <path d="M 200 450 Q 180 350 300 360" 
+          stroke="#eaddab" stroke-width="8" fill="none" opacity="0.3"/>
+    <path d="M 550 450 Q 520 340 590 345" 
+          stroke="#eaddab" stroke-width="6" fill="none" opacity="0.3"/>
+          
+    <!-- Right Arch (More open) -->
+    <path d="M 600 480 Q 570 400 620 390" 
+          stroke="#dcbfa6" stroke-width="12" fill="none" opacity="0.4"/>
+    <circle cx="250" cy="380" r="20" fill="#eaddab" opacity="0.15"/>
+    <circle cx="570" cy="360" r="25" fill="#f9f4e8" opacity="0.2"/>
+      
+    <!-- Greenery: Gentle swaying motions complementing air movement -->
+    <path d="M 300 300 Q 280 320 310 350" stroke="#8da37e" stroke-width="6" fill="none" opacity="0.8"/>
+    <path d="M 310 340 Q 290 360 320 390" stroke="#9fb48a" stroke-width="5" fill="none" opacity="0.7"/>
+    <path d="M 500 320 Q 480 340 510 360" stroke="#7ca66d" stroke-width="7" fill="none" opacity="0.8"/>
+    <path d="M 520 350 Q 500 370 530 390" stroke="#8abf7a" stroke-width="6" fill="none" opacity="0.6"/>
+      
+    <!-- Clouds: Breathable, permeable sky elements -->
+    <path d="M 100 60 Q 120 30 140 55 T 140 75" fill="#ffffff" opacity="0.8"/>
+    <path d="M 650 80 Q 670 50 690 75 T 690 95" fill="#ffffff" opacity="0.7"/>
+    
+    <!-- Title/Nostalgic Touch: Simple inscription in air -->
+    <text x="400" y="35" font-family=" serif, Georgia" font-size="24" fill="#8faec1" text-anchor="middle" opacity="0.7" letter-spacing="3">Seamless Shore Transition</text>
+  
+</svg>
