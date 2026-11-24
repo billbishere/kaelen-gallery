@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Gradient for the teal water with deepening shades -->
+    <linearGradient id="waterGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8FE6F5"/>
+      <stop offset="40%" stop-color="#2FB9D3"/>
+      <stop offset="100%" stop-color="#1A7A96"/>
+    </linearGradient>
+    <!-- Gradient for the sand/island base -->
+    <linearGradient id="sandGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F5F5DC"/>
+      <stop offset="60%" stop-color="#E3C984"/>
+      <stop offset="100%" stop-color="#D2B48C"/>
+    </linearGradient>
+    <!-- Filter for the 'breathable' sand effect - porous noise -->
+    <filter id="porousSand" x="-50%" y="-50%" width="200%" height="200%">
+      <feTurbulence type="fractalNoise" baseFrequency="1.2" numOctaves="3" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="4" channel="G" />
+    </filter>
+    <!-- Filter for light filtering through the structure -->
+    <linearGradient id="beamGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.4"/>
+      <stop offset="30%" stop-color="#FFFFE0" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="800" height="600" fill="#FDFCFA" opacity="1"/>
+
+  <!-- Sun (soft, warm yellow) -->
+  <circle cx="700" cy="50" r="60" fill="#FFFCDD" opacity="0.9"/>
+  <circle cx="700" cy="50" r="60" fill="#FFFFFF" opacity="0.8" filter="url(#softGlow)"/>
+
+  <!-- Horizon / Water Base -->
+  <path d="M-100,280 C150,280 400,150 800,280 L810,280 L790,600 L10,600 Z" fill="url(#waterGrad)"/>
+
+  <!-- Shallow Sea Floor (Soft porous sand layer under water) -->
+  <path d="M-100,320 Q400,250 800,350" fill="none" stroke="url(#sandGrad)" stroke-width="20" opacity="0.6"/>
+
+  <!-- The Arching Walkway Pillars &amp; Bridge -->
+  <!-- Left Pillar (Transparent feel via opacity and shape) -->
+  <path d="M150,280 Q180,400 140,420 L90,460" fill="none" stroke="#B8E3F0" stroke-width="4" stroke-opacity="0.4"/>
+  <path d="M150,280 Q180,400 140,420 Z" fill="white" opacity="0.15" stroke="none"/>
+
+  <!-- Right Pillar -->
+  <path d="M650,280 Q680,400 640,420 L590,460" fill="none" stroke="#B8E3F0" stroke-width="4" stroke-opacity="0.4"/>
+  <path d="M650,280 Q680,400 640,420 Z" fill="white" opacity="0.15" stroke="none"/>
+
+  <!-- Arching Walkway Top -->
+  <path d="M180,320 Q400,300 620,320 L400,340" fill="white" opacity="0.85" stroke="#A0D0F5" stroke-width="8"/>
+  <!-- Detailed porous top surface of the bridge -->
+  <path d="M190,325 Q400,310 610,325 L390,330" fill="white" opacity="0.7" stroke="none"/>
+
+  <!-- Light Beams filtering through the structure -->
+  <path d="M100,150 L200,450" stroke="url(#beamGrad)" stroke-width="10"/>
+  <path d="M700,80 L600,380" stroke="url(#beamGrad)" stroke-width="8"/>
+
+  <!-- Soft ripples on water surface -->
+  <ellipse cx="400" cy="280" rx="250" ry="40" fill="none" stroke="#D4F3F9" stroke-opacity="0.3" stroke-dasharray="5,10"/>
+
+  <!-- Foreground elements (Sandbank leading to viewer) -->
+  <path d="M-20,600 Q400,500 800,600" fill="url(#sandGrad)" filter="url(#porousSand)" opacity="0.9"/>
+  <!-- Scattered stones/shells for texture, not rigid gray -->
+  <circle cx="100" cy="580" r="8" fill="#FFF" opacity="0.6" stroke="#DDB88C" stroke-width="1"/>
+  <circle cx="720" cy="540" r="12" fill="#F5F5DC" opacity="0.8" stroke="#E0D0A0" stroke-width="1"/>
+  <!-- A small piece of driftwood hint -->
+  <path d="M750,560 L780,540 L790,520 L760,510 Z" fill="#D2B48C" opacity="0.6"/>
+
+  <!-- Title Text: Whispers of the Shallow -->
+  <text x="50" y="90" font-family="Georgia, serif" font-size="32" font-style="italic" fill="#555555" letter-spacing="4">Whispers of the Shallow</text>
+
+  <!-- Subtitle/Caption regarding material -->
+  <text x="50" y="125" font-family="Georgia, serif" font-size="20" fill="#777777" opacity="0.8">Porous edges invite breath</text>
+</svg>
