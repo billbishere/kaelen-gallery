@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="sandGrad" x1="0%" y1="80%" x2="100%" y2="80%">
+      <stop offset="0%" style="#F2E3C4:1" />
+      <stop offset="100%" style="#D6BBA2:1" />
+    </linearGradient>
+    <linearGradient id="pillarGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="#FFFFFF:0.9" />
+      <stop offset="50%" style="#E0E0E0:0.9" />
+      <stop offset="100%" style="#FFFFFF:1" />
+    </linearGradient>
+    <linearGradient id="brassGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="#FFD700:1" />
+      <stop offset="25%" style="#B8860B:1" />
+      <stop offset="50%" style="#FFD700:0.8" />
+      <stop offset="75%" style="#B8860B:1" />
+      <stop offset="100%" style="#DAA520:0.9" />
+    </linearGradient>
+    <linearGradient id="archGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="#5FAFD6:0.3" />
+      <stop offset="100%" style="#008B8B:0.25" />
+    </linearGradient>
+    <filter id="glassEffect" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" result="blur" />
+      <feColorMatrix type="matrix" in="blur" values="0 0 0 0 0 0 0 0 0 0 0 0.3 0 0 0 0 0 0.2 0" />
+      <feMerge>
+        <feMergeNode in="SourceGraphic" />
+        <feMergeNode in="blur" />
+      </feMerge>
+    </filter>
+    <radialGradient id="sunGrad" cx="50%" cy="10%" r="60%">
+      <stop offset="0%" style="#FFF8DC:1" />
+      <stop offset="40%" style="#F5F5DC:1" />
+      <stop offset="100%" style="#FFEBCD:0.9" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background Sky -->
+  <rect width="800" height="600" fill="#E0F2F7" />
+  
+  <!-- Sun -->
+  <circle cx="550" cy="80" r="60" fill="url(#sunGrad)" stroke="#FFEBCD" stroke-width="2" opacity="0.8"/>
+  
+  <!-- Yellow Sand Base -->
+  <ellipse cx="400" cy="550" rx="350" ry="100" fill="url(#sandGrad)" opacity="0.95" />
+  
+  <!-- Left Pillar Complex -->
+  <g id="left-pillar">
+    <path d="M250,100 L260,450" stroke="url(#pillarGrad)" stroke-width="8" fill="none" stroke-linecap="round" />
+    <path d="M190,150 Q250,180 310,150" fill="none" stroke="#COCDCD" stroke-width="6" stroke-opacity="0.6" />
+    <!-- Gear 1 -->
+    <circle cx="250" cy="150" r="40" fill="url(#brassGrad)" opacity="0.9" filter="url(#glassEffect)" />
+    <polygon points="273,130 286,150 273,170 260,150 273,130" fill="none" stroke="#B8860B" stroke-width="2" />
+    <polygon points="250,173 283,173 283,190 250,190 250,173" fill="none" stroke="#DAA520" stroke-width="2" />
+    <!-- Gear 2 (interlocking) -->
+    <circle cx="300" cy="280" r="35" fill="url(#brassGrad)" opacity="0.85" filter="url(#glassEffect)" />
+    <polygon points="293,270 305,270 315,260 315,245 293,255" fill="none" stroke="#B8860B" stroke-width="1.5" />
+    <polygon points="300,278 332,278 332,308 300,308 300,278" fill="none" stroke="#DAA520" stroke-width="1.5" />
+    <text x="285" y="255" font-family="serif" font-size="24" fill="rgba(255,255,255,0.6)" font-style="italic">Orrery</text>
+  </g>
+  
+  <!-- Right Pillar Complex (Mirrored &amp; Slightly Different Rotation) -->
+  <g id="right-pillar" transform="scale(-1, 1) translate(-800, 0)">
+    <path d="M250,100 L260,450" stroke="url(#pillarGrad)" stroke-width="8" fill="none" stroke-linecap="round" />
+    <path d="M190,150 Q250,180 310,150" fill="none" stroke="#COCDCD" stroke-width="6" stroke-opacity="0.6" />
+     <!-- Gear 1 -->
+    <circle cx="-250" cy="-150" r="40" fill="url(#brassGrad)" opacity="0.9" filter="url(#glassEffect)" />
+    <polygon points="-263,-130 -276,-150 -263,-170 -276,-150 -263,-130" fill="none" stroke="#B8860B" stroke-width="2" />
+    <polygon points="-250,-173 -283,-173 -283,-190 -250,-190 -250,-173" fill="none" stroke="#DAA520" stroke-width="2" />
+    <!-- Gear 2 -->
+    <circle cx="-300" cy="-280" r="35" fill="url(#brassGrad)" opacity="0.85" filter="url(#glassEffect)" />
+    <polygon points="-293,-270 -305,-270 -315,-260 -315,-245 -293,-255" fill="none" stroke="#B8860B" stroke-width="1.5" />
+    <polygon points="-300,-278 -332,-278 -332,-308 -300,-308 -300,-278" fill="none" stroke="#DAA520" stroke-width="1.5" />
+    <!-- Gear 3 (Unique) -->
+     <circle cx="-240" cy="-120" r="38" fill="url(#brassGrad)" opacity="0.95" filter="url(#glassEffect)" />
+    <polygon points="-261,-108 -278,-132 -261,-156 -244,-132 -261,-108" fill="none" stroke="#C09B00" stroke-width="2" />
+  </g>
+  
+  <!-- Teal Arches Connecting Pillars -->
+  <path d="M160,350 Q250,550 340,350" stroke="url(#archGrad)" fill="none" stroke-width="4" stroke-linecap="round" opacity="0.8" />
+  <path d="M640,350 Q550,550 460,350" stroke="url(#archGrad)" fill="none" stroke-width="4" stroke-linecap="round" opacity="0.8" />
+  
+  <!-- Central Glass Dome Suspended -->
+  <g filter="url(#glassEffect)">
+    <!-- Base Ring of Dome -->
+    <ellipse cx="400" cy="250" rx="180" ry="30" fill="#E0F7FA" stroke="#B2DFDB" stroke-width="3" opacity="0.6" />
+    <!-- Arch Top -->
+    <path d="M220,250 Q400,120 580,250 T400,250" fill="none" stroke="#5FAFD6" stroke-width="2" stroke-opacity="0.3" /> 
+    <!-- Dome Shape -->
+    <path d="M220,280 Q400,150 580,280 Q400,50 220,280" fill="url(#sandGrad)" opacity="0.1" />
+    <!-- Dome Outline -->
+    <path d="M220,280 Q400,150 580,280" fill="none" stroke="#5FAFD6" stroke-width="2" stroke-opacity="0.4"/>
+    <path d="M580,280 L400,180 M400,180 Q400,320 400,180" fill="none" stroke="#B2DFDB" stroke-width="1" stroke-opacity="0.6" />
+    <ellipse cx="400" cy="320" rx="175" ry="80" fill="rgba(95, 175, 214, 0.08)"/>
+    <!-- Suspension Arrows/Structures -->
+     <path d="M400,100 L400,150" stroke="#5FAFD6" stroke-width="1" opacity="0.4" stroke-dasharray="2,4" />
+  </g>
+   
+    <!-- Water Line Reflection hint at bottom sand -->
+    <ellipse cx="400" cy="380" rx="300" ry="25" fill="none" stroke="#5FAFD6" stroke-width="1" stroke-opacity="0.15" style="filter: blur(2px);" />
+     
+    <!-- Foreground detail for depth -->
+    <path d="M0,600 L800,600 L750,550 L300,420" fill="#E0F2F7" stroke="none" />
+    
+</svg>
