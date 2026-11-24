@@ -1,0 +1,98 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Sky Gradient -->
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style-stop-color="#e0f7fa" />
+      <stop offset="100%" style-stop-color="#b2ebf2" />
+    </linearGradient>
+    <!-- Water Gradient -->
+    <linearGradient id="waterGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style-stop-color="#4dd0e1" />
+      <stop offset="100%" style-stop-color="#00897b" />
+    </linearGradient>
+    <!-- Grass Gradient -->
+    <linearGradient id="grassGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style-stop-color="#81c784" />
+      <stop offset="100%" style-stop-color="#388e3c" />
+    </linearGradient>
+    <!-- Wood Fill -->
+    <solid fill="rgb(255, 235, 182)" />
+    <!-- House Pattern -->
+    <pattern id="woodPattern" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="4" fill="#d7ccc8"/>
+    </pattern>
+  </defs>
+
+  <!-- Background: Sky -->
+  <rect x="0" y="0" width="800" height="320" fill="url(#skyGrad)" />
+
+  <!-- Background: Water (Top portion of island behind it or in front? Let's assume island sits on water visible at bottom/top if needed, but prompt says open water. Let's put water as horizon below sky. -->
+  <rect x="0" y="320" width="800" height="280" fill="url(#waterGrad)" />
+
+  <!-- Main Island Shape -->
+  <path d="M 400,320 L 750,320 L 650,580 L 150,580 Z" fill="url(#grassGrad)" stroke="#558b2f" stroke-width="2" />
+
+  <!-- Winding Path -->
+  <path d="M 380,340 C 390,380 410,420 450,450 S 550,520 650,480" stroke="#eeeeee" stroke-width="40" fill="none" stroke-linecap="round" opacity="0.8" />
+  <!-- Secondary Path branching -->
+  <path d="M 450,450 C 460,490 510,530 540,510" stroke="#dddddd" stroke-width="25" fill="none" stroke-linecap="round" opacity="0.7" />
+
+  <!-- House 1: Left Side -->
+  <g transform="translate(200, 280)">
+    <rect x="0" y="0" width="140" height="90" rx="8" fill="#d7ccc8" stroke="#5d4037" stroke-width="3" />
+    <path d="M -10, 25 L 70, 0 L 160, 25 Z" fill="#f4f1ea" stroke="#5d4037" stroke-width="2" />
+    <!-- Window -->
+    <rect x="30" y="25" width="25" height="35" rx="4" fill="#81d4fa" opacity="0.9" />
+    <!-- Garden detail -->
+    <path d="M -10, 90 Q 70, 105 160, 90" stroke="#a5d6a7" stroke-width="2" fill="none" stroke-dasharray="5,5" opacity="0.8" />
+  </g>
+
+  <!-- House 2: Center-Left (on path) -->
+  <g transform="translate(380, 360)">
+    <rect x="-10" y="-40" width="150" height="100" rx="10" fill="#eceff1" stroke="#455a64" stroke-width="2" opacity="0.9" />
+    <path d="M -40, 35 L 80, 0 L 140, 35 Z" fill="#fdfbf7" stroke="#546e7a" stroke-width="2" />
+    <!-- Window -->
+    <rect x="20" y="35" width="22" height="32" rx="3" fill="#81d4fa" opacity="0.8" />
+    <!-- Door -->
+    <rect x="98" y="70" width="25" height="35" rx="2" fill="#a1887f" />
+    <circle cx="111" cy="87" r="1.5" fill="#ffca28" opacity="0.6" /> <!-- Door knocker hint -->
+  </g>
+
+  <!-- House 3: Right Side (on path) -->
+  <g transform="translate(520, 440)">
+    <rect x="0" y="0" width="160" height="85" rx="10" fill="#e1f5fe" stroke="#1976d2" stroke-width="3" />
+    <path d="M -10, 40 L 90, 0 L 190, 40 Z" fill="#ffffff" stroke="#1976d2" stroke-width="2" />
+    <!-- Window -->
+    <rect x="60" y="30" width="30" height="40" rx="4" fill="#4fc3f7" opacity="0.85" />
+    <path d="M 70, 30 L 110, 30 M 90, 32.5 L 90, 62.5" stroke="white" stroke-width="4" />
+    <!-- Window -->
+    <rect x="10" y="65" width="25" height="18" rx="3" fill="#b3e5fc" opacity="0.7" />  <!-- Small attic window -->
+    <!-- Garden border -->
+    <path d="M -5, 90 Q 80, 110 165, 85" stroke="#a5d6a7" stroke-width="2" fill="none" />
+  </g>
+
+  <!-- Trees / Vegetation (Organic shapes) -->
+  <g id="vegetation">
+    <!-- Big Tree Left -->
+    <ellipse cx="300" cy="250" rx="15" ry="45" fill="#d84315" /> 
+    <path d="M 300,205 L 260,300 A 100,60 0 0,1 340,300 Z" fill="url(#grassGrad)" opacity="0.8" stroke="#33691e" stroke-width="2" />
+    <circle cx="300" cy="250" r="4" fill="#7cb342" /> <!-- Tree trunk cross -->
+
+    <!-- Bush Center Left -->
+    <path d="M 350,380 L 380,380 L 395,350 Z" fill="#c6a604" opacity="0.6" />
+    <circle cx="370" cy="360" r="12" fill="#ffd54f" stroke="#ffeb3b" stroke-width="0" />
+
+    <!-- Tree Right -->
+    <ellipse cx="550" cy="390" rx="18" ry="50" fill="#e64a19" />
+    <path d="M 550,340 L 510,470 A 110,70 0 0,1 590,470 Z" fill="url(#grassGrad)" opacity="0.8" stroke="#2e7d32" stroke-width="2" />
+
+    <!-- Flowers / Details along path -->
+    <circle cx="420" cy="400" r="6" fill="#ec407a" /> <!-- Rose -->
+    <circle cx="500" cy="510" r="8" fill="#fff59d" /> <!-- Dandelion center -->
+    <circle cx="428" cy="396" r="8" stroke="#ec407a" stroke-width="2" fill="white" opacity="0.9" /> <!-- Flower head -->
+    <circle cx="504" cy="514" r="12" fill="#fffde7" opacity="0.9" /> <!-- Center of yellow flower -->
+  </g>
+
+  <!-- Title / Context Text -->
+  <text x="10" y="30" font-family="Georgia, serif" font-size="16" fill="#3e2723" opacity="0.8">Low Density Harmony</text>
+</svg>
