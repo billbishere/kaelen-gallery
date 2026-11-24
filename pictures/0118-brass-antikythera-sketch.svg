@@ -1,0 +1,118 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="tealWaterTop" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#A8D5DB;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#6FA9B3;stop-opacity:0.7" />
+    </linearGradient>
+    <linearGradient id="brassGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#E6C200;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B8860B;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="brassDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C49F63;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7A5826;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="whiteSands" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F0F0F0;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="planets" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" style="stop-color:#E8C499" />
+      <stop offset="100%" style="stop-color:#A67B5B" />
+    </radialGradient>
+    <filter id="sketchNoise" x="-50%" y="-50%" width="200%" height="200%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" result="noise"/>
+      <feDiffuseLighting in="SourceGraphic" lighting-color="#fff" surfaceScale="2" diffuseConstant="0.6">
+        <feDistantLight azimuth="45" elevation="60"/>
+      </feDiffuseLighting>
+      <feColorMatrix type="matrix" in="diffuselighting.result">
+        <se>0.7</se><so>1</so><sh>0.3</sh>
+        <sv>0.5</sv><ss>0.8</ss><sx>1</sx><sy>1</sy><sz>1</sz>
+      </feColorMatrix>
+    </filter>
+  </defs>
+
+  <!-- Background: White Sand Floors -->
+  <rect x="0" y="350" width="800" height="250" fill="url(#whiteSands)"/>
+
+  <!-- Background: Teal Water below pillars -->
+  <rect x="0" y="0" width="800" height="360" fill="url(#tealWaterTop)" opacity="0.95"/>
+
+  <!-- Pillars (Stable White Supports) -->
+  <rect x="150" y="200" width="80" height="150" fill="#FFFFFF" stroke="#CFCFCF" stroke-width="2"/>
+  <rect x="570" y="200" width="80" height="150" fill="#FFFFFF" stroke="#CFCFCF" stroke-width="2"/>
+  <!-- Pillar bases in sand -->
+  <rect x="145" y="350" width="90" height="150" fill="#D4C7B8" opacity="0.3"/>
+
+  <!-- Main Structure Frame: Open Room feel, high ceilings implied by verticality -->
+  <path d="M 200 100 L 600 100 L 650 250 L 500 250 L 500 350 L 250 350 L 250 250 L 150 250 Z" fill="none" stroke="#8B7355" stroke-width="6" stroke-dasharray="10,5"/>
+
+  <!-- Glass Casing Top (Transparent Overlay hint) -->
+  <rect x="220" y="60" width="360" height="120" fill="rgba(255,255,255,0.2)" stroke="#B8946F" stroke-width="2"/>
+
+  <!-- Brass Gears System: Complex Orrery Mechanics -->
+  <g stroke="url(#brassDark)" stroke-width="3" fill="none">
+    <!-- Main central axle -->
+    <line x1="400" y1="180" x2="400" y2="250"/>
+    <!-- Orbit rings -->
+    <circle cx="400" cy="200" r="40"/>
+    <circle cx="400" cy="200" r="60"/>
+    <circle cx="400" cy="200" r="90"/>
+    <!-- Gears connected -->
+    <line x1="350" y1="200" x2="400" y2="170"/>
+    <line x1="450" y1="200" x2="400" y2="170"/>
+    <line x1="360" y1="250" x2="400" y2="280"/>
+    <line x1="440" y1="250" x2="400" y2="280"/>
+    <!-- Outer ring connectors -->
+    <path d="M 310 200 L 330 190 M 490 200 L 470 190 M 330 250 L 360 260 M 470 250 L 440 260" stroke="#C4A06B"/>
+  </g>
+
+  <!-- Solid Brass Gears (The heart of the jazz harmonium feel) -->
+  <g fill="url(#brassGold)" stroke="url(#brassDark)" stroke-width="1">
+    <circle cx="400" cy="200" r="40" stroke-dasharray="null"/>
+    <path d="M 378 195 L 378 205 M 422 195 L 422 205 M 378 200 L 360 225 L 415 225 M 400 200 L 400 220" stroke="#C4A06B"/>
+    <circle cx="390" cy="180" r="3" fill="#B8946F"/>
+    <circle cx="410" cy="180" r="3" fill="#B8946F"/>
+    
+    <path d="M 350 235 L 350 210 M 450 235 L 450 210 M 370 240 L 410 260" stroke="#C4A06B"/>
+    <path d="M 368 228 Q 400 220 432 228" fill="none" stroke="#5d4e3a"/>
+    
+    <!-- Planets in motion -->
+    <circle cx="415" cy="170" r="6" fill="url(#planets)" stroke="#FFF" opacity="0.9"/>
+    <circle cx="380" cy="220" r="5" fill="#D8BFA6" stroke="#FFF" opacity="0.9"/>
+    <circle cx="430" cy="160" r="7" fill="url(#planets)" stroke="#FFF" opacity="0.9"/>
+    <!-- Planet trails/suggesting motion -->
+    <path d="M 408 155 Q 400 160 392 155" fill="none" stroke="#F0E6D2" stroke-width="1" opacity="0.7"/>
+  </g>
+
+  <!-- Brass Harmonium Keyboard / Base Mechanism -->
+  <rect x="320" y="280" width="160" height="40" fill="url(#brassDark)" stroke="#B8946F" stroke-width="2"/>
+  <g stroke="#E8DCC4" stroke-width="1">
+    <!-- Keys of the harmonium style -->
+    <line x1="340" y1="295" x2="340" y2="260" />
+    <line x1="358" y1="295" x2="358" y2="275" />
+    <line x1="375" y1="295" x2="375" y2="265" />
+    <line x1="390" y1="295" x2="390" y2="270" />
+    <line x1="408" y1="295" x2="408" y2="260" />
+    <line x1="425" y1="295" x2="425" y2="270" />
+    <line x1="440" y1="295" x2="440" y2="265" />
+    <line x1="460" y1="295" x2="460" y2="275" />
+  </g>
+
+  <!-- Decorative details: exposed gears at the bottom -->
+  <circle cx="350" cy="320" r="15" fill="url(#brassDark)" stroke="#B8946F" stroke-width="1"/>
+  <circle cx="470" cy="320" r="15" fill="url(#brassDark)" stroke="#B8946F" stroke-width="1"/>
+  <!-- Gears teeth detail -->
+  <path d="M 335 320 Q 350 305 365 320" fill="none" stroke="#C4A06B" stroke-width="1.5"/>
+  <path d="M 435 320 Q 450 335 465 320" fill="none" stroke="#C4A06B" stroke-width="1.5"/>
+
+  <!-- Water Surface Reflections -->
+  <ellipse cx="400" cy="340" rx="80" ry="10" fill="#FFF" opacity="0.3" transform="rotate(0 400 340)"/>
+  <ellipse cx="280" cy="335" rx="30" ry="8" fill="#FFF" opacity="0.2" transform="rotate(-15 280 335)"/>
+  <ellipse cx="520" cy="345" rx="25" ry="6" fill="#FFF" opacity="0.1" transform="rotate(25 520 345)"/>
+
+  <!-- Title: Handwritten feel, solemn and nostalgic -->
+  <text x="340" y="580" font-family="Georgia, 'Times New Roman', serif" font-size="18" fill="#B8946F" text-anchor="middle" stroke="#FFF" stroke-width="2">Brass Antikythera Sketch</text>
+</svg>
