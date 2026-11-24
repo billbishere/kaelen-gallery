@@ -1,0 +1,101 @@
+<svg viewBox='0 0 800 600' xmlns='http://www.w3.org/2000/svg' id='image-7f9a2b1c'>
+  <defs>
+    <!-- Gradient for the dark, heavy rain cloud -->
+    <linearGradient id='cloudGradient' x1='0%' y1='0%' x2='100%' y2='100%'>
+      <stop offset='0%' style='stop-color:#1a1f2c;stop-opacity:1' />
+      <stop offset='100%' style='stop-color:#4a5062;stop-opacity:1' />
+    </linearGradient>
+    
+    <!-- Gradient for the white sand -->
+    <linearGradient id='sandGradient' x1='0%' y1='0%' x2='0%' y2='100%'>
+      <stop offset='0%' style='stop-color:#ffffff;stop-opacity:1' />
+      <stop offset='40%' style='stop-color:#e6e9f0;stop-opacity:1' />
+      <stop offset='100%' style='stop-color:#dbe2ee;stop-opacity:1' />
+    </linearGradient>
+    
+    <!-- Filter for splash distortion -->
+    <filter id='splashDistort' x='-50%' y='-50%' width='200%' height='200%'>
+      <feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' result='noise' />
+      <feDisplacementMap in='SourceGraphic' in2='noise' scale='15' xChannelSelector='R' yChannelSelector='G' />
+    </filter>
+  </defs>
+  
+  <!-- Sky and Top Cloud Mass -->
+  <rect x='0' y='0' width='800' height='450' fill='#dce4eb'/>
+  
+  <!-- The Heavy Dark Cloud -->
+  <path d='M -10,420 Q 200,350 400,290 T 800,420 L 800,480 L 760,480 L 760,420 L 730,410 L 700,440 L 580,420 L 480,415 L 450,445 L 300,425 L 180,440 L 150,410 Q 60,380 -10,420 Z' fill='url(#cloudGradient)'/>
+  <ellipse cx='380' cy='270' rx='250' ry='140' fill='#0f1521' opacity='0.8'/> 
+  <!-- Rain Falling from Cloud -->
+  <g fill='#5e6d7e'>
+    <!-- Simple jagged lines for rain droplets, slightly tilted to simulate motion and distortion in the air -->
+    <path d='M 200,290 L 200,340 L 195,330 M 220,280 L 220,350 L 225,360' /> 
+    <path d='M 300,260 L 300,330 L 295,340 M 310,240 L 310,320 L 315,335' />
+    <path d='M 400,220 L 400,330 L 405,320 M 420,200 L 420,340 L 425,330' />
+    <path d='M 500,190 L 500,330 L 505,340 M 520,170 L 520,340 L 525,350' />
+    <path d='M 600,150 L 600,310 L 605,300 M 620,140 L 620,320 L 625,330' />
+    <!-- Add a few more subtle streaks to suggest depth -->
+    <path d='M 280,300 L 275,380 M 330,290 L 320,400' style='opacity:0.6'/> 
+    <path d='M 450,260 L 440,410' style='opacity:0.6'/> 
+    <path d='M 650,200 L 640,380' style='opacity:0.5'/> 
+  </g>
+
+  <!-- The White Sandy Ground with Texture -->
+  <rect x='0' y='480' width='800' height='120' fill='url(#sandGradient)'/>
+  <!-- Subtle noise texture to mimic grain of sand/roughness -->
+  <g opacity='0.6'>
+    <path d='M0,495 Q5,493 10,497 T20,496 M30,498 Q35,496 40,498 T50,499' stroke='#dbe2ee' stroke-width='0.5'/> 
+    <path d='M0,510 Q2,508 6,512 T12,511 M35,511 Q40,509 45,512 T55,513' stroke='#dbe2ee' stroke-width='0.5'/> 
+    <path d='M15,485 Q17,484 22,486 T28,485 M60,490 Q65,488 70,490 T78,491' stroke='#dbe2ee' stroke-width='0.5'/> 
+    <path d='M300,505 Q305,503 310,506 T320,505 M350,515 Q355,513 360,515 T370,516' stroke='#dbe2ee' stroke-width='0.5'/> 
+    <path d='M500,495 Q505,493 510,497 T520,496 M540,505 Q545,503 550,506 T560,505' stroke='#dbe2ee' stroke-width='0.5'/> 
+    <path d='M10,530 Q12,529 16,531 T24,530 M70,528 Q75,526 80,529 T88,528' stroke='#dbe2ee' stroke-width='0.5'/> 
+    <path d='M200,535 Q205,533 210,536 T220,535 M240,545 Q245,543 250,546 T260,545' stroke='#dbe2ee' stroke-width='0.5'/> 
+    <path d='M100,515 Q105,513 110,516 T120,515 M150,520 Q155,518 160,521 T170,520' stroke='#dbe2ee' stroke-width='0.5'/> 
+    <path d='M400,530 Q405,528 410,531 T420,530 M460,525 Q465,523 470,526 T480,525' stroke='#dbe2ee' stroke-width='0.5'/> 
+  </g>
+
+  <!-- Puddles on the sand where rain has landed -->
+  <g opacity='0.9'>
+    <!-- Puddle near left edge -->
+    <path d='M 50,480 Q 60,475 70,480 T 80,488 L 90,486 Q 85,480 80,484 Z' fill='#1e2a3a' filter='url(#splashDistort)'/>
+    <path d='M 52,478 Q 62,473 72,478 T 82,486 L 92,484 Q 87,478 82,482 Z' fill='#2d3a4a'/>
+    
+    <!-- Puddle near center-left -->
+    <path d='M 300,510 Q 310,505 320,510 T 330,518 L 340,516 Q 335,510 330,514 Z' fill='#1e2a3a' filter='url(#splashDistort)'/>
+    <path d='M 302,508 Q 312,503 322,508 T 332,516 L 342,514 Q 337,508 332,512 Z' fill='#2d3a4a'/>
+    
+    <!-- Puddle near center-right -->
+    <path d='M 450,490 Q 460,485 470,490 T 480,498 L 490,496 Q 485,490 480,494 Z' fill='#1e2a3a' filter='url(#splashDistort)'/>
+    <path d='M 452,488 Q 462,483 472,488 T 482,496 L 492,494 Q 487,488 482,492 Z' fill='#2d3a4a'/>
+    
+    <!-- Puddle near right edge -->
+    <path d='M 650,520 Q 660,515 670,520 T 680,528 L 690,526 Q 685,520 680,524 Z' fill='#1e2a3a' filter='url(#splashDistort)'/>
+    <path d='M 652,518 Q 662,513 672,518 T 682,526 L 692,524 Q 687,518 682,522 Z' fill='#2d3a4a'/>
+    
+    <!-- Puddle near right-bottom -->
+    <path d='M 700,535 Q 710,530 720,535 T 730,543 L 740,541 Q 735,535 730,539 Z' fill='#1e2a3a' filter='url(#splashDistort)'/>
+    <path d='M 702,533 Q 712,528 722,533 T 732,541 L 742,539 Q 737,533 732,537 Z' fill='#2d3a4a'/>
+    
+    <!-- Puddle very close to edge left -->
+    <path d='M 10,495 Q 20,490 30,495 T 40,503 L 50,501 Q 45,495 40,499 Z' fill='#1e2a3a' filter='url(#splashDistort)'/>
+    <path d='M 12,493 Q 22,488 32,493 T 42,501 L 52,499 Q 47,493 42,497 Z' fill='#2d3a4a'/>
+    
+    <!-- Puddle very close to edge bottom center -->
+    <path d='M 380,540 Q 390,535 400,540 T 410,548 L 420,546 Q 415,540 410,544 Z' fill='#1e2a3a' filter='url(#splashDistort)'/>
+    <path d='M 382,538 Q 392,533 402,538 T 412,546 L 422,544 Q 417,538 412,542 Z' fill='#2d3a4a'/>
+    
+    <!-- Puddle very close to edge right bottom -->
+    <path d='M 760,530 Q 770,525 780,530 T 790,538 L 800,536 Q 795,530 790,534 Z' fill='#1e2a3a' filter='url(#splashDistort)'/>
+    <path d='M 762,528 Q 772,523 782,528 T 792,536 L 802,534 Q 797,528 792,532 Z' fill='#2d3a4a'/>
+    
+    <!-- Reflection distortion elements within puddles (simulating the water surface warping) -->
+    <path d='M 60,485 Q 70,480 80,485 T 90,492 L 100,490' stroke='#2a3646' stroke-width='0.3' fill='none' opacity='0.3'/> 
+    <path d='M 305,515 Q 315,510 325,515 T 335,522 L 345,520' stroke='#2a3646' stroke-width='0.3' fill='none' opacity='0.3'/> 
+    <path d='M 455,495 Q 465,490 475,495 T 485,502 L 495,500' stroke='#2a3646' stroke-width='0.3' fill='none' opacity='0.3'/> 
+    <path d='M 660,525 Q 670,520 680,525 T 690,532 L 700,530' stroke='#2a3646' stroke-width='0.3' fill='none' opacity='0.3'/> 
+    <path d='M 12,498 Q 22,493 32,498 T 42,505 L 52,503' stroke='#2a3646' stroke-width='0.3' fill='none' opacity='0.3'/> 
+    <path d='M 382,542 Q 392,537 402,542 T 412,549 L 422,547' stroke='#2a3646' stroke-width='0.3' fill='none' opacity='0.3'/> 
+    <path d='M 762,532 Q 772,527 782,532 T 792,539 L 802,537' stroke='#2a3646' stroke-width='0.3' fill='none' opacity='0.3'/> 
+  </g>
+</svg>
