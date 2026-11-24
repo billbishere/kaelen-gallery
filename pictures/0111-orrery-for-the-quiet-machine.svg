@@ -1,0 +1,71 @@
+<svg viewBox='0 0 800 600' xmlns='http://www.w3.org/2000/svg'>
+  <defs>
+    <!-- Gradient for the expansive yellow sky/lake background -->
+    <linearGradient id='bgGrad' x1='0%' y1='0%' x2='100%' y2='100%'>
+      <stop offset='0%' style='stop-color:#FFF9E4'/> 
+      <stop offset='100%' style='stop-color:#F4D03F' />
+    </linearGradient>
+    <!-- Gradient for the teal structural water/platform -->
+    <linearGradient id='waterGrad' x1='0%' y1='0%' x2='100%' y2='0%'>
+      <stop offset='0%' style='stop-color:#57C3DE'/> 
+      <stop offset='100%' style='stop-color:#2E86DE' />
+    </linearGradient>
+    <!-- Gradient for brass mechanism -->
+    <linearGradient id='brassGrad' x1='0%' y1='0%' x2='0%' y2='100%'>
+      <stop offset='0%' style='stop-color:#D4AF37'/> 
+      <stop offset='100%' style='stop-color:#AA8925' />
+    </linearGradient>
+    <!-- Simple circular gradients for planetary models -->
+    <radialGradient id='sunGrad' cx='.5' cy='.5' r='.5'>
+      <stop offset='0%' style='stop-color:#FFD700;stop-opacity:1'/> 
+      <stop offset='80%' style='stop-color:#FFA500;stop-opacity:1'/> 
+    </radialGradient>
+  </defs>
+
+  <!-- Background: Airy open space (Yellow Expanse) -->
+  <rect width='800' height='600' fill='url(#bgGrad)' />
+
+  <!-- Foreground Structure: Teal Beams &amp; Pond Base -->
+  <!-- Left support pillar -->
+  <path d='M 50,500 L 80,120 L 240,120 L 260,500 Z' fill='url(#waterGrad)' stroke='#1B3A57' stroke-width='4'/>
+  <!-- Right support pillar (angled for perspective/balance) -->
+  <path d='M 720,500 L 710,350 L 690,350 L 680,500 Z' fill='#EAFDFD' opacity='0.4'/>
+  <!-- The floating teal pond structure -->
+  <rect x='280' y='100' width='240' height='60' rx='10' fill='url(#waterGrad)' stroke='#0d47a1' stroke-width='3' opacity='0.9'/>
+
+  <!-- Mechanical Elements: Exposed Gears and Rails -->
+  <g id='gear-train'>
+     <!-- Connecting rod/rail exposing the mechanism -->
+    <rect x='300' y='50' width='440' height='80' fill='none' stroke='#A6B2EE' stroke-width='3'/>
+    <!-- Small exposed cogs along the rail -->
+    <circle cx='320' cy='90' r='12' fill='#5D4E37' stroke='#D4AF37' stroke-width='1.5'/>
+    <path d='M 328 74 L 330 74 M 333 77 L 335 80 M 332 90 L 329 95 M 326 90 L 329 85 M 333 108 L 335 115 M 326 102 L 324 108' fill='none' stroke='#D4AF37' stroke-width='1'/>
+    <circle cx='600' cy='90' r='15' fill='#8D6E63' stroke='#D4AF37' stroke-width='1.5'/>
+  </g>
+
+  <!-- Central Object: The Orrery Platform -->
+  <!-- Floating platform base (teal structural element) -->
+  <rect x='400' y='240' width='60' height='8' fill='#29B6F6' transform='rotate(-5 430 244)'/>
+  
+  <!-- Solar System Models (Simple spheres) -->
+  <!-- Sun (Central mass) -->
+  <circle cx='480' cy='360' r='18' fill='url(#sunGrad)' stroke='#FFF' stroke-width='1' opacity='0.95'/>
+  <!-- Orbit paths (thin, airy lines allowing sightlines through) -->
+  <ellipse cx='480' cy='360' rx='45' ry='28' fill='none' stroke='#B0BEC5' stroke-width='1' opacity='0.4'/>
+  <ellipse cx='480' cy='360' rx='30' ry='25' fill='none' stroke='#B0BEC5' stroke-width='1' opacity='0.4'/>
+  
+  <!-- The Pendulum: Balancing element -->
+  <!-- Pendulum Rod (Exposed mechanical component) -->
+  <line x1='480' y1='342' x2='480' y2='450' stroke='#FFB74D' stroke-width='3'/>
+  <!-- Bob weight (brass colored) -->
+  <circle cx='480' cy='460' r='8' fill='#D4AF37' stroke='#5D4E37' stroke-width='1.5'/>
+  <!-- Small gears attached to pendulum assembly -->
+  <circle cx='485' cy='390' r='4' fill='#FFB74D' stroke='#FFB74D' opacity='0.5'/>
+
+  <!-- Water reflection (Subtle hint of flow) -->
+  <path d='M 280,120 L 720,180 L 690,400 L 340,380 L 340,480 Z' fill='#E0F7FA' opacity='0.2' transform='rotate(-2 500 300)'/>
+
+  <!-- Typography: Solemn and descriptive -->
+  <text x='360' y='590' font-family='Georgia, serif' font-size='18' fill='#5D4E37' text-anchor='middle' opacity='0.9'>The Quiet Machine</text>
+
+</svg>
