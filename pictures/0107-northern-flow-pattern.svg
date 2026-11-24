@@ -1,0 +1,79 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Warm Yellow Sand Gradient -->
+    <linearGradient id="sandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F4E4BC;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E6D5A0;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Weathered Stone Gradient -->
+    <linearGradient id="stoneGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7A736F;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#6B6460;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5C5652;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Porous Air Movement Pattern -->
+    <filter id="softAir">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" />
+      <feDiffuseLighting in="SourceGraphic" lighting-color="#FFF8E7" surfaceScale="2">
+        <feDiffuseLight>
+          <fePointLight x="400" y="200" />
+        </feDiffuseLight>
+      </feDiffuseLighting>
+    </filter>
+  </defs>
+  
+  <!-- Background: Porous Yellow Sand -->
+  <rect x="0" y="0" width="800" height="600" fill="url(#sandGrad)" opacity="0.95" />
+  
+  <!-- Ground Texture (Subtle organic noise implication via layering) -->
+  <path d="M-50,100 Q350,80 650,200 T850,450 L850,600 L0,600 Z" fill="#F9EBD1" stroke="none" />
+  
+  <!-- The Semi-Transparent Window Structure -->
+  <!-- Angled frame allowing flow -->
+  <g id="windowStructure" filter="url(#softAir)">
+    <rect x="200" y="50" width="400" height="450" fill="none" stroke="#C9B08A" stroke-width="3" opacity="0.3" />
+    <path d="M 450 50 L 650 170" stroke="#C9B08A" stroke-width="2" opacity="0.5" fill="none" />
+    <!-- Inner glass pane transparency implication -->
+    <path d="M 210 80 L 630 220" stroke="rgba(180,140,90,0.1)" stroke-width="1" stroke-dasharray="10,5" opacity="0.4" />
+  </g>
+  
+  <!-- Air Flow Visualization (Swirling patterns through the structure) -->
+  <g id="airFlow" opacity="0.6">
+    <!-- Swirl 1: Entering bottom left -->
+    <path d="M 250 300 Q 300 250, 350 300 T 450 320" fill="none" stroke="#FFF8E7" stroke-width="2" opacity="0.7" />
+    <!-- Swirl 2: Central eddy -->
+    <path d="M 380 180 Q 420 150, 460 190 T 410 230" fill="none" stroke="#E6D5A0" stroke-width="2.5" opacity="0.8" />
+    <!-- Swirl 3: Exiting top right -->
+    <path d="M 600 220 Q 650 170, 620 140 T 550 180" fill="none" stroke="#F4E4BC" stroke-width="3" opacity="0.5" />
+    <!-- Diffuse swirl background implication -->
+    <circle cx="400" cy="300" r="80" fill="rgba(255, 240, 227, 0.2)" filter="blur(10px)" />
+  </g>
+  
+  <!-- Stone Pillars (Weathered and Ancient, not polished) -->
+  <g id="stonePillars" filter="url(#softAir)">
+    <!-- Left Pillar -->
+    <rect x="320" y="120" width="45" height="280" fill="url(#stoneGrad)" opacity="0.9" />
+    <path d="M 320 120 L 365 120 L 358 320 L 310 320 Z" fill="url(#stoneGrad)" />
+    <!-- Right Pillar -->
+    <rect x="430" y="160" width="50" height="240" fill="url(#stoneGrad)" opacity="0.9" />
+    <path d="M 480 160 L 525 160 L 520 320 L 472 320 Z" fill="url(#stoneGrad)" />
+    <!-- Texture detail for weathered look -->
+    <path d="M 340 180 L 350 195 M 360 220 L 355 240" stroke="#5C5652" stroke-width="1" opacity="0.6" />
+    <path d="M 445 200 L 455 215 M 475 230 L 480 250" stroke="#5C5652" stroke-width="1" opacity="0.6" />
+  </g>
+  
+  <!-- Softened Water/Edge Yielding (White surfaces that don't slice) -->
+  <g id="yieldingEdge">
+    <!-- Soft white curve where structure meets land/water implication -->
+    <path d="M 200 320 C 150 380, 300 420, 650 400 L 650 600 L 200 600 Z" fill="rgba(255,255,255,0.1)" stroke="none" />
+    <!-- Soft transition border -->
+    <path d="M 200 320 C 150 380, 300 420, 650 400" fill="none" stroke="#FFFFFF" stroke-width="4" opacity="0.15" />
+  </g>
+  
+  <!-- Title/Subtle Label -->
+  <text x="50" y="570" font-family="Georgia, serif" font-size="24" fill="#7A736F" opacity="0.8" letter-spacing="1">
+    Northern Flow Pattern
+  </text>
+</svg>
