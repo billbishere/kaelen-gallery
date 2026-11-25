@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Background water -->
+  <rect x="0" y="0" width="800" height="600" fill="rgba(166, 208, 255, 0.8)" />
+  <!-- Sand: foreground rectangle over the water in the bottom part -->
+  <rect x="0" y="0" width="800" height="300" fill="#e1a033" />
+
+  <!-- Waves in the sand: two bands -->
+  <rect x="10" y="150" width="780" height="50" fill="#f5d9b3" />  <!-- top wave -->
+  <rect x="30" y="100" width="740" height="20" fill="#e1a033" />   <!-- bottom wave -->
+
+  <!-- Gear at center (400, 200) -->
+  <g transform="translate(400, 200)">
+    <!-- Circle for the gear -->
+    <circle r="80" fill="teal" stroke="white" stroke-width="5" />
+    <!-- Hub -->
+    <circle r="30" fill="sandybrown" />
+
+    <!-- Teeth: 3 teeth -->
+    <g>
+      <path d="M 50,0 A 30,30 0 0 0 50,30 L 65,10 Z" stroke="white" fill="none" stroke-width="3"/>
+      <path d="M -50,0 A 30,30 0 0 0 -50,30 L -65,10 Z" stroke="white" fill="none" stroke-width="3"/>
+      <!-- The middle one is vertical -->
+      <path d="M 0,-40 A 30,30 0 0 0 40,30" stroke="white" fill="none" stroke-width="3"/>
+    </g>
+  </g>
+
+  <!-- Seaweed around the gear -->
+  <g transform="translate(400, 200)" stroke="darkgreen" stroke-width="3" stroke-linejoin="round" fill="none">
+    <path d="M -40,-50 C -50,-80 -80,-70 -90,-20 C -50,30 -20,50 -50,80" stroke-dasharray="5,3"/>
+    <path d="M 50,-50 C 80,-80 90,-50 120,-30 C 90,20 60,40 80,70" stroke-dasharray="5,3"/>
+    <path d="M 40, -60 C 20, -100 0, -130 -40, -80" stroke-dasharray="5,3"/>
+    <!-- Add one more seaweed strand -->
+    <path d="M 30, -60 C 10, -100 -20, -130 -50, -80" stroke-dasharray="5,3"/>
+  </g>
+</svg>
