@@ -1,0 +1,141 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="skyDay" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e0f7fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b2ebf2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="woodWarm" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#5D4037;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3E2723;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="woodMid" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#795548;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4E342E;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="canopyTeal" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#26C6DA;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00897B;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="oceanDeep" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#E0F7FA;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#80DEEA;stop-opacity:1" />
+      <stop offset="80%" style="stop-color:#0097A7;stop-opacity:1" />
+    </linearGradient>
+    <filter id="softShadow">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3.5" result="blur"/>
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"/>
+    </filter>
+    <filter id="roughWood">
+      <feTurbulence type="fractalNoise" baseFrequency="0.4" numOctaves="3" result="noise"/>
+      <feDiffuseLighting in="noise" surfaceScale="2" lightingColor="#5D4037">
+        <feDraftSurface/>
+      </feDiffuseLighting>
+      <feDisplacementMap in="SourceGraphic" in2="diffuseLightingResult" scale="2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+
+  <!-- Background Sky &amp; Sun -->
+  <rect width="800" height="600" fill="url(#skyDay)"/>
+  <circle cx="720" cy="120" r="60" fill="#FFECB3" opacity="0.9" filter="blur(10px)"/>
+
+  <!-- Distant Ocean Gradient -->
+  <rect x="0" y="480" width="800" height="120" fill="url(#oceanDeep)"/>
+  <path d="M0 520 Q200 560 400 510 T800 530" stroke="#00695C" stroke-width="2" fill="none" opacity="0.3"/>
+
+  <!-- Arch Structure Base -->
+  <g filter="url(#softShadow)">
+    <!-- Repeating Rhythmic Arches Group -->
+    <g transform="translate(50, -80)">
+      <!-- Arch 1 -->
+      <path d="M60 150 C200 400, 400 250, 370 100 C340 -40, 100 -40, 80 100" 
+            fill="none" stroke="url(#woodWarm)" stroke-width="14" filter="url(#roughWood)" opacity="0.95"/>
+      <path d="M75 155 C206 406, 395 256, 364 108 C334 -37, 99 -37, 79 107" 
+            fill="none" stroke="url(#woodMid)" stroke-width="13" opacity="0.85"/>
+      <!-- Arch Top Teal Canopy -->
+      <path d="M62 140 C205 410, 402 270, 374 90 L600 130 C500 440, 150 380, 80 140" 
+            fill="url(#canopyTeal)" stroke="#006064" stroke-width="2"/>
+      <!-- Arch Floor Warm Wood -->
+      <path d="M75 145 C160 380, 460 390, 450 105 L390 145" 
+            fill="#8D6E63" opacity="0.4"/>
+    </g>
+
+    <g transform="translate(180, -50)">
+      <!-- Arch 2 -->
+      <path d="M160 280 C450 120, 650 220, 640 80 C630 -70, 360 -70, 340 80" 
+            fill="none" stroke="url(#woodWarm)" stroke-width="16" filter="url(#roughWood)"/>
+      <path d="M175 285 C500 128, 700 230, 690 84 C680 -62, 410 -62, 390 83" 
+            fill="none" stroke="url(#woodMid)" stroke-width="15"/>
+      <!-- Arch Top Teal Canopy -->
+      <path d="M162 270 C456 130, 670 235, 658 72 L420 195" 
+            fill="url(#canopyTeal)" stroke="#006064" stroke-width="3"/>
+      <!-- Arch Floor Warm Wood -->
+      <path d="M175 282 C485 140, 720 245, 708 86 L630 182" 
+            fill="#8D6E63" opacity="0.35"/>
+    </g>
+
+    <g transform="translate(300, -60)">
+      <!-- Arch 3 (Largest/Most Prominent) -->
+      <path d="M300 200 C700 50, 900 180, 890 80 C880 -140, 620 -140, 600 80" 
+            fill="none" stroke="url(#woodWarm)" stroke-width="20" filter="url(#roughWood)"/>
+      <path d="M325 205 C725 58, 930 188, 920 84 C910 -136, 645 -136, 625 82" 
+            fill="none" stroke="url(#woodMid)" stroke-width="19"/>
+      <!-- Arch Top Teal Canopy -->
+      <path d="M295 190 C700 45, 930 165, 918 72 L680 165" 
+            fill="url(#canopyTeal)" stroke="#006064" stroke-width="4"/>
+      <!-- Arch Floor Warm Wood -->
+      <path d="M325 200 C725 63, 940 185, 928 88 L840 160" 
+            fill="#5D4037" opacity="0.45"/>
+    </g>
+
+    <g transform="translate(420, -30)">
+      <!-- Arch 4 -->
+      <path d="M440 350 C800 140, 970 280, 960 200 C950 -50, 700 -50, 680 10" 
+            fill="none" stroke="url(#woodWarm)" stroke-width="14" filter="url(#roughWood)"/>
+      <path d="M465 355 C825 146, 990 286, 980 202 C970 -38, 720 -38, 700 14" 
+            fill="none" stroke="url(#woodMid)" stroke-width="13"/>
+      <!-- Arch Top Teal Canopy -->
+      <path d="M442 345 C802 140, 974 276, 964 184 L750 270" 
+            fill="url(#canopyTeal)" stroke="#006064" stroke-width="2.5"/>
+      <!-- Arch Floor Warm Wood -->
+      <path d="M465 353 C825 153, 997 276, 987 186 L880 273" 
+            fill="#795548" opacity="0.3"/>
+    </g>
+
+    <g transform="translate(550, -70)">
+      <!-- Arch 5 -->
+      <path d="M650 260 C1000 160, 1080 400, 1070 310 C1060 390, 850 390, 840 290" 
+            fill="none" stroke="url(#woodWarm)" stroke-width="16" filter="url(#roughWood)"/>
+      <path d="M675 265 C1025 166, 1110 384, 1100 390 C1090 406, 875 406, 860 284" 
+            fill="none" stroke="url(#woodMid)" stroke-width="15"/>
+      <!-- Arch Top Teal Canopy -->
+      <path d="M652 255 C1002 156, 1090 368, 1080 384 L970 394" 
+            fill="url(#canopyTeal)" stroke="#006064" stroke-width="3"/>
+      <!-- Arch Floor Warm Wood -->
+      <path d="M675 264 C1025 166, 1118 383, 1108 387 L980 400" 
+            fill="#8D6E63" opacity="0.4"/>
+    </g>
+
+    <!-- Structural Pillars at Base -->
+    <rect x="520" y="190" width="20" height="400" fill="url(#woodMid)"/>
+    <rect x="700" y="210" width="20" height="380" fill="url(#woodMid)"/>
+  </g>
+
+  <!-- Sand Shore -->
+  <path d="M0 420 Q250 460, 400 440 T800 410" 
+        fill="none" stroke="#EFEBE9" stroke-width="10"/>
+  <rect x="0" y="425" width="800" height="220" fill="#D7CCC8" opacity="0.9"/>
+  <!-- Sand Texture -->
+  <path d="M50 450 L120 455 M130 460 L160 452 M100 480 L150 485" stroke="#BCAAA4" stroke-width="1" opacity="0.2"/>
+
+  <!-- Floor Plank Warmth -->
+  <path d="M10 430 L790 430 M60 440 L780 440 M140 450 L760 450" 
+        fill="#D7CCC8" stroke="#8D6E63" stroke-width="2"/>
+
+  <!-- Rhythm Light Breathing through -->
+  <ellipse cx="200" cy="200" rx="40" ry="80" fill="#B2DFDB" opacity="0.6"/>
+  <ellipse cx="650" cy="160" rx="60" ry="100" fill="#B2DFDB" opacity="0.7"/>
+
+  <!-- Title -->
+  <text x="400" y="50" text-anchor="middle" font-family="Georgia, serif" font-size="28" fill="#5D4037" opacity="0.8" letter-spacing="2">COASTAL RESPIRATION</text>
+  <text x="400" y="180" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#BCAAA4" letter-spacing="4" opacity="0.6">ARCHES OPEN TO THE SEA</text>
+</svg>
