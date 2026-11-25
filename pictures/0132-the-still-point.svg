@@ -1,0 +1,72 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="waterGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8fb6c9;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#5a7e8e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2c4a5d;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8eceb;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#dbece9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c3d6cc;stop-opacity:1" />
+    </linearGradient>
+    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="rgba(0,0,0,0.25)"/>
+    </filter>
+    <linearGradient id="woodGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a3b2a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#6d5845;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4a3b2a;stop-opacity:1" />
+    </linearGradient>
+    <clipPath id="sandArchClip">
+      <path d="M200,50 L350,-50 L600,150 A175,175 0 0,1 800,50 Z" />
+    </clipPath>
+  </defs>
+
+  <!-- Background Sky -->
+  <rect x="0" y="0" width="800" height="600" fill="url(#skyGrad)" />
+
+  <!-- Distant Horizon Water Gradient Base -->
+  <path d="M0,500 Q400,520 800,500 V600 H0 Z" fill="url(#waterGrad)" />
+  
+  <!-- The Still Grey Point (Water observation zone) -->
+  <ellipse cx="400" cy="520" rx="300" ry="100" fill="rgba(100,120,140,0.1)" />
+  
+  <!-- Translucent Yellow Panels (Morning Heat Catchers) - High up on structures -->
+  <rect x="680" y="80" width="90" height="35" fill="#eef720" opacity="0.4" />
+  <rect x="580" y="140" width="80" height="30" fill="#eedd0b" opacity="0.35" />
+
+  <!-- Vertical Structure: Slender Wooden Posts (Let sea breeze pass) -->
+  <rect x="690" y="100" width="25" height="180" fill="#3e2e1d" />
+  <rect x="570" y="160" width="28" height="240" fill="#3e2e1d" filter="url(#softShadow)" />
+  
+  <!-- Warm Sandstone Arch (Collecting sunlight, framing the view) -->
+  <path d="M550,40 L650,-80 L780,40 Q650,120 500,40 L390,-60 Z" fill="#cca072" opacity="0.9" />
+  <!-- Carved detail inside arch -->
+  <path d="M550,40 L600,-50 L650,40 M720,50 L720,380 L740,350" stroke="#a08060" stroke-width="1" fill="none" />
+
+  <!-- The Ground: Brown Paths on Garden Beds (Grounded and correct) -->
+  <path d="M-20,550 Q400,620 820,580 L820,600 H0 Z" fill="url(#woodGrad)" filter="url(#softShadow)" />
+  <rect x="-20" y="480" width="840" height="80" fill="#7c6150" opacity="0.85" />
+  <!-- Moss/greenery on path edges -->
+  <circle cx="100" cy="490" r="20" fill="#4a7c3b" />
+  <circle cx="700" cy="560" r="25" fill="#5b8a4f" opacity="0.9" />
+
+  <!-- The Lone Mechanical Stylus (The observer) -->
+  <g transform="translate(400, 200)">
+    <!-- Shaft -->
+    <rect x="-6" y="0" width="12" height="280" fill="#b5b5b5" />
+    <!-- Grip/Head details -->
+    <rect x="-3" y="-30" width="18" height="45" fill="#f5e6c0" stroke="#dcbfa0" stroke-width="1" />
+    <circle cx="0" cy="-20" r="2.5" fill="black" />
+  </g>
+
+  <!-- Greenery - Natural framing -->
+  <!-- Left bush -->
+  <path d="M80,350 Q100,400 80,450 Q60,420 50,380 Q40,420 30,450" fill="#5a7e4d" />
+  <path d="M100,480 L200,480 L150,550 Z" fill="#6b9662" />
+  <!-- Right bush -->
+  <circle cx="720" cy="300" r="60" fill="#5a7e4d" opacity="0.9" />
+  <path d="M780,280 Q820,290 790,340 L750,320" fill="none" stroke="#3a5f3b" stroke-width="2" stroke-linecap="round" />
+
+</svg>
