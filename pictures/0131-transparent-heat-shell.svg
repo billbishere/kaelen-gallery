@@ -1,0 +1,71 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+  <!-- Background: Ocean &amp; Horizon -->
+  <rect width="800" height="600" fill="#e6f0fa"/>
+  <path d="M0 350 L800 350" stroke="#aaddff" stroke-width="4" opacity="0.8"/>
+  <circle cx="150" cy="250" r="180" fill="#dbe6f2" filter="url(#soft-glow)"/>
+  
+  <!-- Floor/Sand Base -->
+  <path d="M0 380 C400 420 800 380 800 450 L800 600 L0 600 Z" fill="#eaddcf" opacity="0.9"/>
+  
+  <!-- Support Pillars (Brown Wood - Warm, Tactile) -->
+  <!-- Left Column Group -->
+  <g stroke="#5d4037" stroke-width="8" stroke-linecap="round">
+    <!-- Main Rib/Post -->
+    <path d="M60 250 L140 200 L140 580" fill="none"/>
+    <!-- Secondary Rib Crossing (Translucent feeling) -->
+    <path d="M40 180 L60 560" stroke-width="6" opacity="0.9"/>
+    <path d="M140 200 L100 530" stroke-opacity="0.7"/>
+  </g>
+  <!-- Right Column Group -->
+  <g stroke="#5d4037" stroke-width="8" stroke-linecap="round">
+    <!-- Main Rib/Post -->
+    <path d="M740 250 L660 200 L660 580" fill="none"/>
+    <!-- Secondary Rib Crossing -->
+    <path d="M760 180 L740 560" stroke-width="6" opacity="0.9"/>
+    <path d="M660 200 L700 530" stroke-opacity="0.7"/>
+  </g>
+  
+  <!-- Yellow Glass Panels (Translucent, Filtering Light) -->
+  <defs>
+    <linearGradient id="glass-gradient-1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff9c4" stop-opacity="0.85"/>
+      <stop offset="50%" stop-color="#fff59d" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#ffd54f" stop-opacity="0.4"/>
+    </linearGradient>
+    <filter id="glass-sheen">
+      <feColorMatrix type="saturate" values="2" />
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1"/>
+    </filter>
+  </defs>
+  
+  <!-- Central Canopy Panels -->
+  <rect x="50" y="280" width="260" height="240" fill="url(#glass-gradient-1)" stroke="#ffb74d" stroke-width="1" opacity="0.9"/>
+  <rect x="490" y="280" width="260" height="240" fill="url(#glass-gradient-1)" stroke="#ffb74d" stroke-width="1" opacity="0.9"/>
+  
+  <!-- Cross Panels connecting columns -->
+  <rect x="50" y="400" width="600" height="80" fill="url(#glass-gradient-1)" rx="10" stroke="#e6a15c" stroke-width="1" opacity="0.8"/>
+  
+  <!-- Warmth Aura (Radiating Heat) -->
+  <defs>
+    <radialGradient id="heat-core" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#ffecb3"/>
+      <stop offset="60%" stop-color="#ffe082"/>
+      <stop offset="100%" stop-color="#fff"/>
+    </radialGradient>
+  </defs>
+  <ellipse cx="400" cy="400" rx="180" ry="120" fill="url(#heat-core)" opacity="0.3" filter="blur(5px)"/>
+  <path d="M350 360 Q400 330 450 360 T550 390 L500 440 Q400 420 300 440 Z" fill="none" stroke="#ffcc80" stroke-width="3" opacity="0.4"/>
+  
+  <!-- Wind Motion (Visible through transparency) -->
+  <path d="M250 320 Q300 350 350 310 T450 300" stroke="#b2dfdb" stroke-width="2" fill="none" opacity="0.6"/>
+  <path d="M280 420 Q320 440 360 410" stroke="#b2dfdb" stroke-width="2" fill="none" opacity="0.6"/>
+  
+  <!-- Floor Reflection (Warmth hitting ground) -->
+  <ellipse cx="400" cy="580" rx="100" ry="30" fill="#ffecb3" opacity="0.5"/>
+  
+  <!-- Label -->
+  <text x="70" y="630" font-family="Georgia, serif" font-size="24" fill="#8d6e63" letter-spacing="1" text-anchor="start">
+    Transparent Heat Shell
+  </text>
+</svg>
