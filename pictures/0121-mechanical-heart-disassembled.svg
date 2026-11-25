@@ -1,0 +1,51 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="shape-rendering: crispEdges;">
+  <g transform="translate(400, 300)">
+    <!-- Rusty Brass Border -->
+    <path d="M 40 40 A 120 120 0 0 1 520 40 A 120 120 0 0 1 520 480 A 120 120 0 0 1 40 480 A 120 120 0 0 1 40 40" stroke="url(#rust)" stroke-width="3" fill="none" />
+    <!-- Main Heart Outline -->
+    <path d="M 320 40 C 260 160, 260 160, 240 240 S 420 240, 340 240" stroke="url(#brass)" stroke-width="10" fill="none"/>
+    <!-- Gears Section -->
+    <g opacity="0.9">
+      <!-- Central Large Gear -->
+      <path d="M 0 240 M 50 150 A 100 100 0 0 1 130 150 A 100 100 0 0 1 220 150 A 100 100 0 0 1 280 210 A 100 100 0 0 0 200 270 A 100 100 0 0 0 140 240" transform="translate(280, -180)" stroke="url(#brass)" stroke-width="3" fill="url(#copper)" />
+      <!-- Smaller Gears (offset for independence) -->
+      <path d="M 0 240 M 40 130 A 80 80 0 0 1 110 130 A 80 80 0 0 1 160 180 A 80 80 0 0 0 100 220" transform="translate(420, 20)" stroke="url(#bronze)" stroke-width="2" fill="none" />
+      <!-- Additional Independent Gear -->
+      <path d="M 0 240 M 50 120 A 100 100 0 0 1 120 120 A 100 100 0 0 1 190 190 A 100 100 0 0 0 100 260" transform="translate(100, 140)" stroke="url(#iron)" stroke-width="4" fill="none" opacity="0.85" />
+    </g>
+    <!-- Counterintuitive Motion Arrows -->
+    <path d="M 300 200 Q 320 180, 300 180 Q 280 180, 300 160" stroke="black" stroke-width="2" fill="none" />
+    <path d="M 300 200 Q 310 170, 290 170 Q 280 170, 300 190" stroke="black" stroke-width="2" fill="none" />
+    <!-- Hidden Fastening -->
+    <circle cx="300" cy="120" r="12" stroke="url(#rust)" fill="#7A6D50" opacity="0.95"/>
+    <!-- Texture Overlay -->
+    <filter id="dust" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="turbulence" baseFrequency="0.006" />
+      <feGaussianBlur stdDeviation="2" />
+    </filter>
+    <!-- Calligraphy Title -->
+    <text x="100" y="-80" font-family="Courier" font-size="24" stroke="url(#copper)" stroke-width="0.5" fill="none">
+      Disassembled
+    </text>
+    <!-- Defs -->
+    <defs>
+      <linearGradient id="brass" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#D4C5A2;stop-opacity:1"/>
+        <stop offset="100%" style="stop-color:#A39D8B;stop-opacity:1"/>
+      </linearGradient>
+      <linearGradient id="copper" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#E3785C;stop-opacity:1"/>
+        <stop offset="50%" style="stop-color:#C2694B;stop-opacity:0.8"/>
+      </linearGradient>
+      <linearGradient id="rust" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" style="stop-color:#3F5D48;stop-opacity:0.8"/>
+        <stop offset="100%" style="stop-color:#1D2D21;stop-opacity:0.6"/>
+      </linearGradient>
+      <radialGradient id="sand" cx="50%" cy="50%" r="50%" fx="50%" fy="50%" gradientUnits="userSpaceOnUse">
+        <stop offset="0%" style="stop-color:#D4C8B8;stop-opacity:1"/>
+        <stop offset="50%" style="stop-color:#B8A896;stop-opacity:0.8"/>
+        <stop offset="100%" style="stop-color:#8B7760;stop-opacity:0.4"/>
+      </radialGradient>
+    </defs>
+  </g>
+</svg>
