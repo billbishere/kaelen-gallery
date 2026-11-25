@@ -1,0 +1,53 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradients for materials as per Kaelen's preferences -->
+    <linearGradient id="tealWood" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" style="stop-color:#0f5c64;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#eafaf9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="brownWood" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" style="stop-color:#3e2723;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5d4037;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grayStone" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" style="stop-color:#8e9ea5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#eceff1;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="sunGlow" cx="0.2" cy="-0.2" r="0.8">
+      <stop offset="0%" style="stop-color:#ffcc80;stop-opacity:1" />
+      <stop offset="90%" style="stop-color:#ffe0b2;stop-opacity:1" />
+    </radialGradient>
+    <!-- Star shapes defined for decoration -->
+    <path id="star" d="M 0,-3 L 1,1.5 L -0.7,1 L 1,0.2 L -0.5,-2 L 1.9,-1.6 L 0,2 L -2.8,-1.6 L -0.7,1.6 Z" style="transform:scale(12) translate(-12px, -12px);fill:white;pointer-events:none;"/>
+  </defs>
+
+  <!-- Sky and Horizon -->
+  <rect width="800" height="600" fill="#c5cae9" />
+  <ellipse cx="700" cy="350" rx="200" ry="400" fill="url(#sunGlow)" opacity="0.3" />
+
+  <!-- Landscape Elements (Avoiding Yellow Sand as per preference) -->
+  <!-- Gray Stone Pathway Base -->
+  <path d="M 150,550 Q 350,580 500,400 T 650,200" stroke="url(#grayStone)" stroke-width="40" fill="none"/>
+  <!-- Teal Curved Walkway (The main subject: reflecting heat) -->
+  <path d="M 150,550 Q 350,600 500,250 T 650,80" fill="url(#tealWood)" stroke="#004d56" stroke-width="2" opacity="0.9"/>
+  <!-- Highlight on Teal path to show reflection/reflection of light -->
+  <path d="M 160,560 Q 380,610 490,260 T 640,70" stroke="#eaffec" stroke-width="2" fill="none"/>
+  <!-- Shaded Corner Area created by the curve -->
+  <rect x="550" y="180" width="150" height="200" rx="150" ry="150" fill="#cfd8dc" opacity="0.4" style="mix-blend-mode: overlay;"/>
+  
+  <!-- Structural Support / Clusters avoiding clutter blocking stars -->
+  <!-- Teal Pillars supporting the 'ceiling' of the path illusion -->
+  <path d="M 350,160 L 350,550" stroke="#0f7f72" stroke-width="8" opacity="0.8"/>
+  <path d="M 450,280 L 450,580" stroke="#0f7f72" stroke-width="6" opacity="0.8"/>
+  
+  <!-- Text Annotations in Kaelen's font style (serif feel via default) -->
+  <text x="100" y="620" font-family="Georgia, serif" font-size="24" fill="#3e2723">Thermal Bridge Blueprint</text>
+  <text x="550" y="380" font-family="Georgia, serif" font-size="18" fill="#33695b" text-anchor="middle">Shaded Corner / Heat Sink Zone</text>
+  
+  <!-- Decorative Stars in the sky -->
+  <use href="#star" x="50" y="100" opacity="0.8"/>
+  <use href="#star" x="720" y="80" opacity="0.9"/>
+  <use href="#star" x="400" y="50" opacity="0.6"/>
+  <use href="#star" x="150" y="150" opacity="0.7"/>
+  
+</svg>
