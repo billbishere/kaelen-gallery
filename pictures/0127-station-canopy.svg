@@ -1,0 +1,38 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600' id='StationCanopy'>
+  <!-- Background Water (Match rope hue logic, dark teal/blue for evening) -->
+  <defs>
+    <linearGradient id='waterGrad' x1='0%' y1='100%' x2='0%' y2='0%'>
+      <stop offset='0%' style='stop-color:#2c4f59;stop-opacity:1' /> <!-- Deep water color -->
+      <stop offset='100%' style='stop-color:#1a333b;stop-opacity:1' />
+    </linearGradient>
+    <filter id='softLight'>
+      <feGaussianBlur in='SourceGraphic' stdDeviation='2'/> 
+      <!-- Blending to create soft, diffused light feel without sharp edges -->
+      <feBlend mode='soft-light' in2='#000000'/> 
+    </filter>
+  </defs>
+  <rect width='800' height='600' fill='url(#waterGrad)'/>
+  <!-- Fog/Atmosphere at bottom for 'no cold drafts near water' vibe, but kept diffuse -->
+  <ellipse cx='400' cy='580' rx='300' ry='20' fill='white' opacity='0.15'/>
+  <g transform='translate(-100, 50)'>
+    <!-- Left Pillar (Thin Brown) -->
+    <rect x='180' y='200' width='24' height='380' fill='#5c4033'/>
+    <!-- Right Pillar (Thin Brown, slight curvature in perspective implied by top) -->
+    <path d='M 600,200 Q 620,220 580,570 L 640,570 Q 630,550 610,200' fill='#4e3b2c'/>
+    <!-- Central support for stability -->
+    <line x1='400' y1='200' x2='400' y2='570' stroke='#4a3628' stroke-width='12' opacity='0.9'/>
+  </g>
+  <!-- Roof Structure -->
+  <path d='M 175,195 Q 400,160 625,195 L 625,230 Q 400,210 175,230 Z' fill='#f4f8fb' opacity='0.4'/> <!-- Translucent sheet top -->
+  <path d='M 175,235 Q 400,215 625,235 L 625,250 Q 400,235 175,255 Z' fill='#f0f5f9' opacity='0.2'/> <!-- Lower sheet -->
+  <!-- Supports for roof beams (thin lines inside) to suggest lightweight structure -->
+  <line x1='180' y1='220' x2='400' y2='170' stroke='#a38b7c' stroke-width='3'/>
+  <line x1='620' y1='220' x2='400' y2='170' stroke='#a38b7c' stroke-width='3'/>
+  <line x1='400' y1='195' x2='400' y2='215' stroke='#a38b7c' stroke-width='2'/>
+  <!-- Light diffusion effect (Soft light entering) -->
+  <rect width='800' height='600' fill='white' opacity='0.12' filter='url(#softLight)'/>
+  <!-- Base platform on island -->
+  <path d='M 300,560 Q 400,600 500,560 L 480,550 L 520,550 Z' fill='#e0dcc9' opacity='0.7'/>
+  <!-- Text Title -->
+  <text x='400' y='70' text-anchor='middle' font-family='Georgia, serif' font-size='28' fill='#4a3628' opacity='0.9'>Station Canopy</text>
+</svg>
