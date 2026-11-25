@@ -1,0 +1,72 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient for overcast grey sky -->
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#AAB8B2;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#98A39E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F0EBE6;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Gradient for damp, textured grey water -->
+    <linearGradient id="waterGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#6B7578;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8FA4A6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D3E2E0;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Gradient for the teal sea splash in the distance -->
+    <linearGradient id="tealSplash" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A9E8B;stop-opacity:0.9" />
+      <stop offset="50%" style="stop-color:#3D7F6F;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#5CA893;stop-opacity:0.4" />
+    </linearGradient>
+    
+    <!-- Pattern for wooden deck -->
+    <pattern id="deckPattern" x="0" y="0" width="200" height="60" patternUnits="userSpaceOnUse">
+      <rect width="200" height="30" fill="#A58C74" />
+      <path d="M-1 30 L201 30 M-1 0 L201 0" stroke="#968370" stroke-width="4" fill="none" opacity="0.6"/>
+    </pattern>
+    
+    <!-- Filter for grain/noise to simulate damp texture -->
+    <filter id="noiseFilter">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" result="noise" />
+      <feDiffuseLighting in="SourceGraphic" lighting-color="#ccc" surfaceScale="2">
+        <feDistantLight azimuth="45" elevation="60" />
+      </feDiffuseLighting>
+    </filter>
+  </defs>
+
+  <!-- Background: Sky -->
+  <rect x="0" y="0" width="800" height="200" fill="url(#skyGradient)"/>
+
+  <!-- Foreground/Distinction Line: Horizon where sky meets the transition to water/deck illusion -->
+  <rect x="0" y="200" width="800" height="400" fill="#EAE8E3" opacity="0.8"/>
+
+  <!-- The Deck (Earthly Brown) - Taking up bottom half, felt damp and cozy but grounded -->
+  <rect x="0" y="250" width="800" height="140" fill="url(#deckPattern)" opacity="0.9"/>
+  <!-- Add slight noise to deck to imply dampness on wood -->
+  <path d="M0,250 Q400,240 800,260 L800,390 Q400,400 0,390 Z" fill="#A58C74"/>
+  
+  <!-- Clouds: Pressing down from top, soft edges to blend with the horizon -->
+  <path d="M0,200 C150,160 350,150 800,190 Q600,220 500,240 V380 H300 V140 Q100,180 0,200 Z" fill="#C5CDC7"/>
+  <path d="M-50,220 C100,180 400,160 850,200 Q600,230 500,250 V390 H350 V170 Q150,200 -10,220 Z" fill="#BBC0BC" opacity="0.8"/>
+  
+  <!-- The Teal Splash: A distant calming sea visible through a mist/hole in the grey atmosphere -->
+  <circle cx="360" cy="240" r="120" fill="url(#tealSplash)" opacity="0.5"/>
+  
+  <!-- Subtle waves in the teal area to suggest depth of sea -->
+  <path d="M300,280 C320,270 340,290 360,285 C380,280 400,270 420,280 C440,290 460,275 480,285" stroke="#5CA893" stroke-width="2" fill="none" opacity="0.4"/>
+  <path d="M240,250 C260,245 290,255 310,260" stroke="#5CA893" stroke-width="3" fill="none" opacity="0.3"/>
+  
+  <!-- Overlay: Heavy damp texture/noise over the entire scene to unifying it -->
+  <rect x="0" y="0" width="800" height="600" filter="url(#noiseFilter)"/>
+  
+  <!-- Soft amber light hints in bottom corners mimicking warmth without full exposure -->
+  <radialGradient cx="90%" cy="95%" r="30%" fx="85%" fy="85%">
+    <stop offset="0%" style="stop-color:#FFF4E6;stop-opacity:0.3" />
+    <stop offset="100%" style="stop-color:#FFF4E6;stop-opacity:0" />
+  </radialGradient>
+  
+  <!-- Title -->
+  <text x="40" y="570" font-family="Georgia, serif" font-size="24" fill="#968370" font-style="italic">Grey Water and Teal Silence</text>
+  </svg>
